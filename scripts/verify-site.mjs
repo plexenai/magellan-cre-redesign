@@ -5,6 +5,14 @@ const pageFiles = [
   "index.html",
   "about.html",
   "services.html",
+  "investment-sales.html",
+  "seller-representation.html",
+  "buyer-representation.html",
+  "landlord-representation.html",
+  "tenant-representation.html",
+  "business-brokerage.html",
+  "property-management.html",
+  "loan-packaging.html",
   "deal-matrix.html",
   "team.html",
   "contact.html",
@@ -42,6 +50,11 @@ const requiredText = [
   "Landlord Representation",
   "Tenant Representation",
   "Business Brokerage",
+  "Business Sales and Ownership Transitions",
+  "Business Exit Strategy Planning",
+  "Confidential Marketing of Businesses",
+  "Retail Centers",
+  "Hard Money Lending and Bank Conversations",
   "Property Evaluation and Financial Analysis",
   "Market Positioning and Pricing Strategy",
   "Buyer Qualification and Investor Targeting",
@@ -84,6 +97,14 @@ const expectedPageTitles = {
   "index.html": "Magellan CRE | J. Max Hamidi, CCIM",
   "about.html": "About Max | Magellan CRE",
   "services.html": "Services | Magellan CRE",
+  "investment-sales.html": "Investment Sales | Magellan CRE",
+  "seller-representation.html": "Seller Representation | Magellan CRE",
+  "buyer-representation.html": "Buyer Representation | Magellan CRE",
+  "landlord-representation.html": "Landlord Representation | Magellan CRE",
+  "tenant-representation.html": "Tenant Representation | Magellan CRE",
+  "business-brokerage.html": "Business Brokerage | Magellan CRE",
+  "property-management.html": "Property Management | Magellan CRE",
+  "loan-packaging.html": "Loan Packaging | Magellan CRE",
   "deal-matrix.html": "Commercial Deal Matrix | Magellan CRE",
   "team.html": "Team | Magellan CRE",
   "contact.html": "Contact | Magellan CRE",
@@ -106,6 +127,21 @@ for (const text of homeOnlyDeepSections) {
 assert.ok(existsSync("assets/j-max-hamidi.jpg"), "Expected Max photo asset");
 assert.ok(statSync("assets/j-max-hamidi.jpg").size > 1000, "Expected Max photo asset to be a real image");
 assert.ok(existsSync("assets/magellan-loop.svg"), "Expected loop background asset");
+
+const serviceDetailLinks = [
+  "investment-sales.html",
+  "seller-representation.html",
+  "buyer-representation.html",
+  "landlord-representation.html",
+  "tenant-representation.html",
+  "business-brokerage.html",
+  "property-management.html",
+  "loan-packaging.html",
+];
+
+for (const link of serviceDetailLinks) {
+  assert.ok(pages["services.html"].includes(`href="${link}"`), `Expected Services directory to link to ${link}`);
+}
 
 const requiredFormNames = [
   "name",

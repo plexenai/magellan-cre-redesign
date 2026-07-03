@@ -12,6 +12,14 @@ borrowers, and referral partners.
 - `index.html` - founder-led homepage
 - `about.html` - Max's background and experience
 - `services.html` - commercial real estate service lanes
+- `investment-sales.html` - investment sales detail page
+- `seller-representation.html` - seller representation detail page
+- `buyer-representation.html` - buyer representation detail page
+- `landlord-representation.html` - landlord representation detail page
+- `tenant-representation.html` - tenant representation detail page
+- `business-brokerage.html` - business brokerage detail page
+- `property-management.html` - property management detail page
+- `loan-packaging.html` - commercial financing and loan packaging detail page
 - `deal-matrix.html` - qualified-opportunity fit guide
 - `team.html` - advisor network and team page
 - `contact.html` - contact details and static inquiry UI
