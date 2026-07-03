@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-label="Abstract commercial real estate map lines, retail sites, and lender connections">
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#17202A"/>
+      <stop offset="0.48" stop-color="#26313B"/>
+      <stop offset="1" stop-color="#6F8178"/>
+    </linearGradient>
+    <linearGradient id="route" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B08A3C" stop-opacity="0.1"/>
+      <stop offset="0.5" stop-color="#F6F1E8" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#B08A3C" stop-opacity="0.12"/>
+    </linearGradient>
+    <filter id="soft">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#paper)"/>
+  <g opacity="0.16">
+    <path d="M-80 266 C250 190 425 304 688 228 C960 148 1104 50 1390 130 C1600 189 1690 285 1880 246" fill="none" stroke="url(#route)" stroke-width="4"/>
+    <path d="M-50 562 C210 458 450 620 720 510 C930 423 1120 381 1345 458 C1574 536 1664 698 1858 642" fill="none" stroke="url(#route)" stroke-width="4"/>
+    <path d="M-100 835 C180 755 395 826 620 750 C826 680 1010 701 1215 795 C1428 892 1627 846 1875 762" fill="none" stroke="url(#route)" stroke-width="4"/>
+  </g>
+  <g opacity="0.18" stroke="#F6F1E8" stroke-width="1">
+    <path d="M180 0v1100M360 0v1100M540 0v1100M720 0v1100M900 0v1100M1080 0v1100M1260 0v1100M1440 0v1100M1620 0v1100"/>
+    <path d="M0 160h1800M0 320h1800M0 480h1800M0 640h1800M0 800h1800M0 960h1800"/>
+  </g>
+  <g opacity="0.55">
+    <circle cx="290" cy="304" r="8" fill="#B08A3C"/>
+    <circle cx="668" cy="232" r="8" fill="#F6F1E8"/>
+    <circle cx="1050" cy="378" r="8" fill="#B08A3C"/>
+    <circle cx="1370" cy="462" r="8" fill="#F6F1E8"/>
+    <circle cx="560" cy="754" r="8" fill="#B08A3C"/>
+    <circle cx="1160" cy="796" r="8" fill="#F6F1E8"/>
+    <circle cx="1512" cy="746" r="8" fill="#B08A3C"/>
+  </g>
+  <g opacity="0.16" fill="#F6F1E8" filter="url(#soft)">
+    <rect x="188" y="222" width="148" height="74"/>
+    <rect x="922" y="318" width="184" height="92"/>
+    <rect x="1238" y="694" width="224" height="100"/>
+  </g>
+  <g opacity="0.48" fill="none" stroke="#B08A3C" stroke-width="2">
+    <rect x="190" y="226" width="148" height="74"/>
+    <rect x="924" y="322" width="184" height="92"/>
+    <rect x="1240" y="698" width="224" height="100"/>
+  </g>
+</svg>
