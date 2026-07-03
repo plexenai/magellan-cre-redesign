@@ -5,6 +5,7 @@ const pageFiles = [
   "index.html",
   "about.html",
   "services.html",
+  "asset-types.html",
   "investment-sales.html",
   "seller-representation.html",
   "buyer-representation.html",
@@ -13,9 +14,14 @@ const pageFiles = [
   "business-brokerage.html",
   "property-management.html",
   "loan-packaging.html",
+  "listings.html",
+  "sale-listings.html",
+  "commercial-lease-listings.html",
   "deal-matrix.html",
   "team.html",
   "contact.html",
+  "terms-conditions.html",
+  "privacy-policy.html",
 ];
 
 for (const file of pageFiles) {
@@ -50,6 +56,22 @@ const requiredText = [
   "Landlord Representation",
   "Tenant Representation",
   "Business Brokerage",
+  "Listings",
+  "Sale Listings",
+  "Commercial Lease Listings",
+  "Current Availability",
+  "Lease Availability",
+  "Asset Types",
+  "Multifamily",
+  "Office and Industrial",
+  "Land",
+  "Hospitality",
+  "Special Property and Specialty Realty",
+  "Private Equity",
+  "Training",
+  "Terms &amp; Conditions",
+  "Privacy Policy",
+  "https://www.linkedin.com/in/j-max-hamidi-ccim-65599624/",
   "Business Sales and Ownership Transitions",
   "Business Exit Strategy Planning",
   "Confidential Marketing of Businesses",
@@ -97,6 +119,7 @@ const expectedPageTitles = {
   "index.html": "Magellan CRE | J. Max Hamidi, CCIM",
   "about.html": "About Max | Magellan CRE",
   "services.html": "Services | Magellan CRE",
+  "asset-types.html": "Asset Types | Magellan CRE",
   "investment-sales.html": "Investment Sales | Magellan CRE",
   "seller-representation.html": "Seller Representation | Magellan CRE",
   "buyer-representation.html": "Buyer Representation | Magellan CRE",
@@ -105,9 +128,14 @@ const expectedPageTitles = {
   "business-brokerage.html": "Business Brokerage | Magellan CRE",
   "property-management.html": "Property Management | Magellan CRE",
   "loan-packaging.html": "Loan Packaging | Magellan CRE",
+  "listings.html": "Listings | Magellan CRE",
+  "sale-listings.html": "Sale Listings | Magellan CRE",
+  "commercial-lease-listings.html": "Commercial Lease Listings | Magellan CRE",
   "deal-matrix.html": "Commercial Deal Matrix | Magellan CRE",
   "team.html": "Team | Magellan CRE",
   "contact.html": "Contact | Magellan CRE",
+  "terms-conditions.html": "Terms &amp; Conditions | Magellan CRE",
+  "privacy-policy.html": "Privacy Policy | Magellan CRE",
 };
 
 for (const [file, title] of Object.entries(expectedPageTitles)) {
@@ -137,10 +165,26 @@ const serviceDetailLinks = [
   "business-brokerage.html",
   "property-management.html",
   "loan-packaging.html",
+  "asset-types.html",
 ];
 
 for (const link of serviceDetailLinks) {
   assert.ok(pages["services.html"].includes(`href="${link}"`), `Expected Services directory to link to ${link}`);
+}
+
+const listingsLinks = [
+  "listings.html",
+  "sale-listings.html",
+  "commercial-lease-listings.html",
+];
+
+for (const link of listingsLinks) {
+  assert.ok(combined.includes(`href="${link}"`), `Expected site to link to ${link}`);
+}
+
+for (const [file, pageHtml] of Object.entries(pages)) {
+  assert.ok(pageHtml.includes('href="terms-conditions.html"'), `Expected ${file} footer to link to terms`);
+  assert.ok(pageHtml.includes('href="privacy-policy.html"'), `Expected ${file} footer to link to privacy`);
 }
 
 const requiredFormNames = [

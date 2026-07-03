@@ -490,6 +490,74 @@ h3 {
   line-height: 1.35;
 }
 
+.listing-section {
+  display: grid;
+  gap: 28px;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.listing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.listing-card,
+.listing-empty,
+.legal-section {
+  background: var(--white);
+  border: 1px solid var(--line);
+  padding: 24px;
+}
+
+.listing-card {
+  display: grid;
+  align-content: start;
+  gap: 18px;
+  min-height: 300px;
+}
+
+.listing-card h2,
+.listing-empty h2,
+.legal-section h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.7rem, 3vw, 2.45rem);
+}
+
+.listing-card p,
+.listing-empty p,
+.legal-section p {
+  color: var(--text);
+}
+
+.listing-card .button,
+.listing-empty .button {
+  width: fit-content;
+}
+
+.listing-empty {
+  max-width: 860px;
+  border-top: 5px solid var(--brass);
+}
+
+.asset-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.legal-section {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.legal-section h2 {
+  margin-top: 34px;
+}
+
+.legal-section h2:first-child {
+  margin-top: 0;
+}
+
 .fit-section {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
@@ -765,6 +833,11 @@ textarea:focus {
 }
 
 .site-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  flex-wrap: wrap;
   padding: 28px clamp(18px, 5vw, 58px);
   background: var(--ink);
 }
@@ -772,6 +845,18 @@ textarea:focus {
 .site-footer p {
   margin: 0;
   color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  border-bottom: 1px solid rgba(176, 138, 60, 0.8);
 }
 
 @media (max-width: 1080px) {
@@ -783,6 +868,7 @@ textarea:focus {
   }
 
   .matrix-grid,
+  .asset-grid,
   .principles-grid {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -822,7 +908,8 @@ textarea:focus {
   }
 
   .service-lanes,
-  .proof-grid {
+  .proof-grid,
+  .listing-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -856,6 +943,7 @@ textarea:focus {
   .proof-grid,
   .process-grid,
   .detail-grid,
+  .listing-grid,
   .matrix-grid,
   .principles-grid,
   .form-grid {
