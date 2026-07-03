@@ -47,6 +47,7 @@ for (const name of requiredFormNames) {
 
 assert.ok(html.includes("data-static-form"), "Expected form to be clearly marked as static");
 assert.ok(!/placeholder/i.test(html), "Visible placeholder language should be removed from HTML");
+assert.ok(!/preview/i.test(html), "Public page should not use internal preview language");
 assert.ok(!/preview\/prototype/i.test(html), "Public page should not describe itself as a preview/prototype");
 assert.ok(!/Not the production replacement/i.test(html), "Public footer should not use internal production disclaimer language");
 
