@@ -186,7 +186,7 @@ h3 {
   padding: 16px;
 }
 
-.portrait-placeholder {
+.portrait-visual {
   display: grid;
   min-height: 300px;
   place-items: center;
@@ -197,7 +197,7 @@ h3 {
   text-align: center;
 }
 
-.portrait-placeholder span {
+.portrait-visual span {
   max-width: 230px;
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.4rem;
@@ -284,7 +284,8 @@ blockquote {
 }
 
 .field-notes,
-.proof-grid {
+.proof-grid,
+.process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 14px;
@@ -292,8 +293,10 @@ blockquote {
 
 .field-notes article,
 .proof-grid article,
+.process-grid article,
 .advisor-card,
-.contact-card {
+.contact-card,
+.inquiry-form {
   background: var(--white);
   border: 1px solid var(--line);
   padding: 24px;
@@ -309,6 +312,48 @@ blockquote {
   gap: clamp(28px, 5vw, 62px);
   background: var(--ink);
   color: var(--white);
+}
+
+.process-section {
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+}
+
+.process-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.process-grid article {
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+
+.process-grid article::after {
+  position: absolute;
+  right: -30px;
+  bottom: -56px;
+  color: rgba(176, 138, 60, 0.16);
+  content: attr(data-map);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 9rem;
+  line-height: 1;
+}
+
+.process-grid span {
+  display: inline-grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  margin-bottom: 28px;
+  background: var(--ink);
+  color: var(--white);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.2rem;
+}
+
+.process-grid p {
+  color: var(--text);
 }
 
 .fit-intro p {
@@ -381,8 +426,15 @@ blockquote {
   background: var(--white);
 }
 
+.contact-panel {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.68fr) minmax(0, 1.32fr);
+  gap: 16px;
+}
+
 .contact-card {
   display: grid;
+  align-content: start;
   gap: 12px;
   border-top: 5px solid var(--brass);
 }
@@ -392,6 +444,71 @@ blockquote {
   color: var(--ink);
   font-weight: 700;
   border-bottom: 1px solid var(--brass);
+}
+
+.inquiry-form {
+  display: grid;
+  gap: 18px;
+  border-top: 5px solid var(--sage);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+label {
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 0;
+  background: #fbfaf7;
+  color: var(--ink);
+  font: inherit;
+  min-height: 44px;
+  padding: 10px 12px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--brass);
+  outline: 2px solid rgba(176, 138, 60, 0.18);
+}
+
+.full-span {
+  grid-column: 1 / -1;
+}
+
+.form-note {
+  margin: 0;
+  color: var(--text);
+}
+
+.inquiry-form button {
+  width: fit-content;
+  min-height: 46px;
+  border: 0;
+  background: var(--ink);
+  color: var(--white);
+  cursor: default;
+  font: inherit;
+  font-weight: 700;
+  padding: 11px 16px;
 }
 
 .site-footer {
@@ -425,7 +542,9 @@ blockquote {
   .service-lanes,
   .field-notes,
   .fit-grid,
-  .proof-grid {
+  .proof-grid,
+  .process-grid,
+  .contact-panel {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -444,14 +563,17 @@ blockquote {
     min-height: auto;
   }
 
-  .portrait-placeholder {
+  .portrait-visual {
     min-height: 240px;
   }
 
   .service-lanes,
   .field-notes,
   .fit-grid,
-  .proof-grid {
+  .proof-grid,
+  .process-grid,
+  .contact-panel,
+  .form-grid {
     grid-template-columns: 1fr;
   }
 

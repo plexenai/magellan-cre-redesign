@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Magellan CRE Redesign Preview</title>
+    <title>Magellan CRE | Commercial Real Estate Advisor</title>
     <meta
       name="description"
       content="A founder-led redesign preview for The Magellan Group and J. Max Hamidi, CCIM."
@@ -23,6 +23,7 @@
         <a href="#about">About Max</a>
         <a href="#services">Services</a>
         <a href="#fit">Deal Fit</a>
+        <a href="#process">Process</a>
         <a href="#team">Team</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -45,8 +46,8 @@
         </div>
 
         <aside class="portrait-card" aria-label="Founder-led advisor note">
-          <div class="portrait-placeholder">
-            <span>Max portrait or real retail property image</span>
+          <div class="portrait-visual">
+            <span>Max portrait or retail property photography</span>
           </div>
           <blockquote>
             "I would rather help you understand a deal honestly than force a transaction that does
@@ -103,15 +104,15 @@
           <h2>Practical commercial real estate support, organized around the work clients actually need.</h2>
         </div>
         <div class="field-notes">
-          <article>
+          <article data-map="01">
             <h3>Retail and Convenience Real Estate</h3>
             <p>Guidance for gas stations, convenience stores, strip centers, and retail locations.</p>
           </article>
-          <article>
+          <article data-map="02">
             <h3>Acquisition and Sale Advisory</h3>
             <p>Support for owners and investors evaluating, buying, or selling commercial assets.</p>
           </article>
-          <article>
+          <article data-map="03">
             <h3>Loan Packaging and Bank Conversations</h3>
             <p>Help clarifying the borrower story, property details, deal structure, and next step.</p>
           </article>
@@ -153,6 +154,39 @@
         </div>
       </section>
 
+      <section id="process" class="section-pad process-section">
+        <div class="section-heading">
+          <p class="eyebrow">How Max Works</p>
+          <h2>Clear thinking before the transaction gets complicated.</h2>
+        </div>
+        <div class="process-grid">
+          <article>
+            <span>1</span>
+            <h3>Understand the situation</h3>
+            <p>
+              Start with the owner, borrower, investor, property, timing, and desired outcome so the
+              conversation is grounded in the real objective.
+            </p>
+          </article>
+          <article>
+            <span>2</span>
+            <h3>Organize what matters</h3>
+            <p>
+              Clarify the commercial facts, lender questions, leasing considerations, and practical
+              risks before time is spent chasing the wrong path.
+            </p>
+          </article>
+          <article>
+            <span>3</span>
+            <h3>Move with the right people</h3>
+            <p>
+              Coordinate buyers, sellers, investors, banks, tenants, and referral partners around a
+              plan that makes sense for the deal.
+            </p>
+          </article>
+        </div>
+      </section>
+
       <section class="section-pad proof-section">
         <div class="section-heading">
           <p class="eyebrow">Experience That Shows Up In The Details</p>
@@ -187,7 +221,7 @@
           <div class="avatar">GS</div>
           <div>
             <h3>Ginny Shea Dunn</h3>
-            <p>Advisor profile placeholder drawing from the current site, refined for accuracy and fit.</p>
+            <p>Advisor profile drawing from the current site, refined for accuracy and fit.</p>
           </div>
         </div>
       </section>
@@ -201,19 +235,73 @@
             referral context before the first call.
           </p>
         </div>
-        <div class="contact-card">
-          <h3>J. Max Hamidi, CCIM</h3>
-          <a href="mailto:max@ccim.net">max@ccim.net</a>
-          <a href="tel:+18667242629">Office: (866) 724-2629</a>
-          <a href="tel:+19016064941">Cell: (901) 606-4941</a>
-          <p>1914 Exeter Rd., Suite 3<br>Germantown, TN 38138</p>
-          <p>Local: (901) 290-1185</p>
+        <div class="contact-panel">
+          <div class="contact-card">
+            <h3>J. Max Hamidi, CCIM</h3>
+            <a href="mailto:max@ccim.net">max@ccim.net</a>
+            <a href="tel:+18667242629">Office: (866) 724-2629</a>
+            <a href="tel:+19016064941">Cell: (901) 606-4941</a>
+            <p>1914 Exeter Rd., Suite 3<br>Germantown, TN 38138</p>
+            <p>Local: (901) 290-1185</p>
+          </div>
+
+          <form class="inquiry-form" aria-label="Commercial inquiry form" data-static-form>
+            <h3>Commercial inquiry form</h3>
+            <div class="form-grid">
+              <label>
+                Name
+                <input name="name" type="text" autocomplete="name">
+              </label>
+              <label>
+                Email
+                <input name="email" type="email" autocomplete="email">
+              </label>
+              <label>
+                Phone
+                <input name="phone" type="tel" autocomplete="tel">
+              </label>
+              <label>
+                Role
+                <select name="role">
+                  <option>Owner</option>
+                  <option>Investor</option>
+                  <option>Borrower</option>
+                  <option>Business operator</option>
+                  <option>Referral partner</option>
+                </select>
+              </label>
+              <label>
+                Property or deal type
+                <input name="deal-type" type="text">
+              </label>
+              <label>
+                Location
+                <input name="location" type="text">
+              </label>
+              <label>
+                Estimated value or range
+                <input name="estimated-value" type="text">
+              </label>
+              <label>
+                Timeline
+                <input name="timeline" type="text">
+              </label>
+              <label class="full-span">
+                Message
+                <textarea name="message" rows="5"></textarea>
+              </label>
+            </div>
+            <p class="form-note">
+              Thanks for reaching out. Max will review the details and follow up if this looks like a fit.
+            </p>
+            <button type="button">Prepare inquiry</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Magellan CRE redesign preview. Not the production replacement for magellancre.com.</p>
+      <p>The Magellan Group - Commercial real estate advisory in Germantown and the Memphis region.</p>
     </footer>
   </body>
 </html>
