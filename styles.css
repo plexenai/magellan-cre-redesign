@@ -212,6 +212,29 @@ blockquote {
   line-height: 1.35;
 }
 
+.quick-facts {
+  background: var(--white);
+  color: var(--ink);
+  padding: 22px;
+}
+
+.quick-facts p {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.22rem;
+  line-height: 1.35;
+}
+
+.quick-facts ul {
+  margin: 18px 0 0;
+  padding-left: 20px;
+  color: var(--text);
+}
+
+.quick-facts li {
+  margin-bottom: 8px;
+}
+
 .service-lanes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -250,6 +273,8 @@ blockquote {
 .fit-card li,
 .proof-grid p,
 .team-section p,
+.timeline p,
+.principles-grid span,
 .contact-section p,
 .site-footer p {
   color: var(--text);
@@ -272,6 +297,40 @@ blockquote {
 .section-heading {
   max-width: 980px;
   margin-bottom: 36px;
+}
+
+.background-section {
+  background: var(--white);
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.timeline article {
+  min-height: 300px;
+  padding: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+}
+
+.timeline span {
+  display: inline-flex;
+  margin-bottom: 44px;
+  color: var(--sage);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.timeline h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.45rem;
+  line-height: 1.1;
 }
 
 .services-section {
@@ -306,6 +365,10 @@ blockquote {
   min-height: 220px;
 }
 
+.deep-services {
+  grid-template-columns: repeat(4, 1fr);
+}
+
 .fit-section {
   display: grid;
   grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
@@ -320,7 +383,7 @@ blockquote {
 }
 
 .process-grid {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .process-grid article {
@@ -367,6 +430,10 @@ blockquote {
   gap: 16px;
 }
 
+.matrix-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .fit-card {
   padding: 28px;
   background: rgba(255, 255, 255, 0.08);
@@ -379,6 +446,10 @@ blockquote {
 
 .fit-card.careful {
   border-top: 4px solid var(--sage);
+}
+
+.fit-card.bring {
+  border-top: 4px solid var(--white);
 }
 
 .fit-card ul {
@@ -399,14 +470,43 @@ blockquote {
   grid-template-columns: repeat(3, 1fr);
 }
 
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.principles-grid span {
+  display: grid;
+  min-height: 62px;
+  place-items: center;
+  padding: 10px;
+  background: rgba(111, 129, 120, 0.12);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-align: center;
+}
+
 .team-section {
   align-items: center;
 }
 
+.team-grid {
+  display: grid;
+  gap: 16px;
+}
+
 .advisor-card {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 18px;
+}
+
+.feature-advisor {
+  border-top: 5px solid var(--brass);
 }
 
 .avatar {
@@ -419,6 +519,12 @@ blockquote {
   color: var(--white);
   font-family: Georgia, "Times New Roman", serif;
   font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.small-contact {
+  margin-bottom: 0;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
@@ -541,8 +647,11 @@ textarea:focus {
 
   .service-lanes,
   .field-notes,
+  .timeline,
   .fit-grid,
+  .matrix-grid,
   .proof-grid,
+  .principles-grid,
   .process-grid,
   .contact-panel {
     grid-template-columns: repeat(2, 1fr);
@@ -569,8 +678,11 @@ textarea:focus {
 
   .service-lanes,
   .field-notes,
+  .timeline,
   .fit-grid,
+  .matrix-grid,
   .proof-grid,
+  .principles-grid,
   .process-grid,
   .contact-panel,
   .form-grid {

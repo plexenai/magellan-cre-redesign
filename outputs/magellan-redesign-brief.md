@@ -106,6 +106,33 @@ Signature elements:
 - 1914 Exeter Rd., Suite 3, Germantown, TN 38138
 - Local: (901) 290-1185
 
+## Deeper Max Content To Carry Forward
+
+This pass should make the site feel much more like Max, using both the meeting notes and the current website as source material.
+
+Max said the current site has useful information but lost personality, became too broad, and needs fewer, stickier points. He wants the site to focus on what he actually does:
+
+- Commercial real estate brokerage
+- Loan packaging for bank conversations
+- Retail-sector work, especially gas stations, convenience stores, and strip centers
+- Investor property management, leasing, rent collection, deposits, and vacancy marketing
+- Helping investors add stores and strip centers to their portfolios
+- Qualified referrals rather than low-value residential-style leads
+- A clear matrix or guideline for what kinds of deals and financing conversations fit
+- Exposure for advisor agents and mentees who work with him
+
+Public site facts to preserve and rewrite in a more personal voice:
+
+- Max began in commercial real estate identifying and acquiring Circle K locations across Tennessee, Mississippi, and Alabama.
+- He worked with larger convenience and fueling stations.
+- He joined Marcus & Millichap in Memphis in 2017 before opening his own firm.
+- He is CEO and managing broker with Sperry Commercial Global Affiliates, Magellan Group.
+- His current work includes acquiring retail properties, developing strip centers, leasing, property management, and related commercial real estate services.
+- Before commercial brokerage, he was a franchise regional manager for Perkins Family Restaurants, specializing in site selection, operations, and market growth.
+- He helped add 13 Perkins locations in the Northeast.
+- Ginny Shea Dunn brings Lakeland economic development experience, including work connected to Stonebridge Golf Course, Gateway Tire, Sprouts, The Lake District, Orange Theory Fitness, and local retail in Lakeland, TN.
+- Public service lines include Investment Sales, Seller Representation, Buyer Representation, Landlord Representation, Tenant Representation, Business Brokerage, Property Management, Hard Money Lending, Construction and Redevelopment Management, Office and Industrial, Land, Hospitality, and Special Property work.
+
 ## Manus Status
 
 Manus received the approved full-context direction but the generation path failed, then a retry hit an account-side `credit limit exceeded` error. This brief preserves the approved direction for a future Manus/Fable/design pass.

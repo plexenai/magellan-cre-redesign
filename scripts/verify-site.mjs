@@ -4,11 +4,35 @@ import { readFileSync } from "node:fs";
 const html = readFileSync("index.html", "utf8");
 const css = readFileSync("styles.css", "utf8");
 const combined = `${html}\n${css}`;
+const normalizedCombined = combined.replace(/\s+/g, " ");
 
 const requiredText = [
   "The Magellan Group",
   "J. Max Hamidi, CCIM",
   "Commercial real estate guidance from a broker who knows the deal behind the property.",
+  "Circle K",
+  "Tennessee, Mississippi, and Alabama",
+  "Marcus &amp; Millichap",
+  "Perkins Family Restaurants",
+  "13 new Perkins locations",
+  "Sperry Commercial Global Affiliates",
+  "Loan Packaging",
+  "gas stations, convenience stores, and strip centers",
+  "leasing, rent collection, vacancy marketing, management, and deposits",
+  "Commercial Deal Matrix",
+  "near seven figures or above",
+  "Investment Sales",
+  "Seller Representation",
+  "Buyer Representation",
+  "Landlord Representation",
+  "Tenant Representation",
+  "Business Brokerage",
+  "Property Evaluation and Financial Analysis",
+  "Market Positioning and Pricing Strategy",
+  "Buyer Qualification and Investor Targeting",
+  "Ginny comes with economic development experience",
+  "Sprouts, The Lake District, Orange Theory Fitness",
+  "Advisor Agents and Mentees",
   "How Max Works",
   "Commercial inquiry form",
   "Property or deal type",
@@ -20,10 +44,19 @@ const requiredText = [
 ];
 
 for (const text of requiredText) {
-  assert.ok(combined.includes(text), `Expected site to include: ${text}`);
+  assert.ok(normalizedCombined.includes(text), `Expected site to include: ${text}`);
 }
 
-const requiredIds = ["about", "services", "fit", "process", "team", "contact"];
+const requiredIds = [
+  "about",
+  "background",
+  "services",
+  "matrix",
+  "process",
+  "proof",
+  "team",
+  "contact",
+];
 
 for (const id of requiredIds) {
   assert.ok(html.includes(`id="${id}"`), `Expected section id="${id}"`);
