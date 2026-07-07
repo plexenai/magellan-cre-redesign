@@ -84,6 +84,12 @@ const requiredText = [
   "Sprouts, The Lake District, Orange Theory Fitness",
   "Advisor Agents and Mentees",
   "assets/j-max-hamidi.jpg",
+  "assets/ginny-dunn.jpg",
+  "assets/magellan-group-logo.png",
+  "assets/favicon.ico",
+  "Vision",
+  "Fun",
+  "Thoughtful, cooperative, and ethical commercial real estate service.",
   "assets/magellan-loop.svg",
   "15s",
   "How Max Works",
@@ -154,6 +160,12 @@ for (const text of homeOnlyDeepSections) {
 
 assert.ok(existsSync("assets/j-max-hamidi.jpg"), "Expected Max photo asset");
 assert.ok(statSync("assets/j-max-hamidi.jpg").size > 1000, "Expected Max photo asset to be a real image");
+assert.ok(existsSync("assets/ginny-dunn.jpg"), "Expected Ginny photo asset");
+assert.ok(statSync("assets/ginny-dunn.jpg").size > 1000, "Expected Ginny photo asset to be a real image");
+assert.ok(existsSync("assets/magellan-group-logo.png"), "Expected Magellan logo asset");
+assert.ok(statSync("assets/magellan-group-logo.png").size > 1000, "Expected Magellan logo asset to be a real image");
+assert.ok(existsSync("assets/favicon.ico"), "Expected favicon ico asset");
+assert.ok(existsSync("assets/favicon.png"), "Expected favicon png asset");
 assert.ok(existsSync("assets/magellan-loop.svg"), "Expected loop background asset");
 
 const serviceDetailLinks = [
@@ -183,6 +195,7 @@ for (const link of listingsLinks) {
 }
 
 for (const [file, pageHtml] of Object.entries(pages)) {
+  assert.ok(pageHtml.includes('href="assets/favicon.ico"'), `Expected ${file} to link favicon`);
   assert.ok(pageHtml.includes('href="terms-conditions.html"'), `Expected ${file} footer to link to terms`);
   assert.ok(pageHtml.includes('href="privacy-policy.html"'), `Expected ${file} footer to link to privacy`);
 }

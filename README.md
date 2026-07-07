@@ -30,7 +30,7 @@ borrowers, and referral partners.
 - `terms-conditions.html` - terms page adapted from the current site
 - `privacy-policy.html` - privacy page adapted from the current site
 - `styles.css` - responsive styling and approved palette
-- `assets/` - Max portrait and motion background artwork
+- `assets/` - Max portrait, Ginny portrait, Magellan logo, favicons, and motion background artwork
 - `outputs/magellan-redesign-brief.md` - supporting redesign brief
 
 ## Notes
