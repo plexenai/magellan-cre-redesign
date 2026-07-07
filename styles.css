@@ -111,10 +111,27 @@ a {
   border-bottom: 1px solid var(--line);
 }
 
-.motion-hero::before {
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-video {
   position: absolute;
   inset: 0;
   z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.74;
+  pointer-events: none;
+}
+
+.motion-hero::before {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
   background:
     linear-gradient(90deg, rgba(246, 241, 232, 0.96), rgba(246, 241, 232, 0.76)),
     url("assets/magellan-loop.svg");
@@ -151,6 +168,10 @@ a {
 
   .motion-hero::before {
     animation: none;
+  }
+
+  .hero-video {
+    display: none;
   }
 }
 

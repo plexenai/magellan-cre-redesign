@@ -87,6 +87,8 @@ const requiredText = [
   "assets/ginny-dunn.jpg",
   "assets/magellan-group-logo.png",
   "assets/favicon.ico",
+  "assets/magellan-hero-loop.mp4",
+  "autoplay muted loop playsinline",
   "Vision",
   "Fun",
   "Thoughtful, cooperative, and ethical commercial real estate service.",
@@ -166,6 +168,8 @@ assert.ok(existsSync("assets/magellan-group-logo.png"), "Expected Magellan logo 
 assert.ok(statSync("assets/magellan-group-logo.png").size > 1000, "Expected Magellan logo asset to be a real image");
 assert.ok(existsSync("assets/favicon.ico"), "Expected favicon ico asset");
 assert.ok(existsSync("assets/favicon.png"), "Expected favicon png asset");
+assert.ok(existsSync("assets/magellan-hero-loop.mp4"), "Expected hero loop video asset");
+assert.ok(statSync("assets/magellan-hero-loop.mp4").size > 100000, "Expected hero loop video to be a real video file");
 assert.ok(existsSync("assets/magellan-loop.svg"), "Expected loop background asset");
 
 const serviceDetailLinks = [
