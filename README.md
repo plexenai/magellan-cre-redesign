@@ -31,9 +31,12 @@ Approved palette: `#141E28` ink, `#F7F2E9` parchment, `#B08A3C` brass, `#6F8178`
 - `terms-conditions.html`, `privacy-policy.html`
 - `styles.css` — design system
 - `main.js` — mobile nav, sticky header, scroll reveals, contact form
-- `sitemap.xml`, `robots.txt` — SEO (update the base URL when the production domain
-  moves to magellancre.com)
-- `outputs/magellan-redesign-brief.md` — supporting redesign brief
+- `sitemap.xml`, `robots.txt` — SEO. The preview is intentionally noindexed; at launch
+  on magellancre.com flip robots.txt to `Allow: /`, re-add the Sitemap line, and update
+  the base URLs in sitemap.xml and the Open Graph tags.
+- `vercel.json` — clean URLs (`/about` instead of `/about.html`) and redirects from the
+  old site's paths
+- `404.html` — custom not-found page
 
 ## Notes
 

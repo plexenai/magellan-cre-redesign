@@ -1,0 +1,8 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/business-broker", "destination": "/business-brokerage", "permanent": true },
+    { "source": "/about-1", "destination": "/about", "permanent": true }
+  ]
+}
