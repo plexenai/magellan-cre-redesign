@@ -6,72 +6,126 @@
     <link rel="icon" href="assets/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <title>Listings | Magellan CRE</title>
-    <meta
-      name="description"
-      content="Commercial sale and lease listing information from The Magellan Group and J. Max Hamidi, CCIM."
-    >
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Commercial sale and lease listings from The Magellan Group in Germantown and the Memphis region — confirm current availability directly with Max.">
+    <meta property="og:title" content="Listings | Magellan CRE">
+    <meta property="og:description" content="Commercial sale and lease listings from The Magellan Group in Germantown and the Memphis region — confirm current availability directly with Max.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://magellan-cre-redesign.vercel.app/listings.html">
+    <meta property="og:image" content="https://magellan-cre-redesign.vercel.app/assets/j-max-hamidi.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Magellan Group home">
-        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="" aria-hidden="true">
+        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="The Magellan Group logo">
         <span class="brand-copy">
           <strong>The Magellan Group</strong>
           <small>Commercial Real Estate</small>
         </span>
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="about.html">About Max</a>
         <a href="services.html">Services</a>
         <a aria-current="page" href="listings.html">Listings</a>
         <a href="deal-matrix.html">Deal Matrix</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Start a Conversation</a>
       </nav>
     </header>
 
-    <main>
-      <section class="page-hero simple-hero service-detail-hero">
-        <div>
-          <p class="eyebrow">Listings</p>
-          <h1>Commercial sale and lease opportunities start with a current conversation.</h1>
-          <p class="hero-text">
-            The current Magellan site carries separate shells for Sale Listings and Commercial Lease
-            Listings. This page preserves that structure while keeping the redesign honest: current
-            availability should be confirmed directly with Max before a client relies on it.
-          </p>
+    <main id="main">
+      <section class="page-hero on-dark">
+        <div class="page-hero-grid">
+          <div class="reveal visible">
+            <p class="eyebrow">Listings</p>
+            <h1>Commercial opportunities start with <em>a current conversation.</em></h1>
+            <p class="lede">Sale and lease availability changes quickly. Confirm current opportunities directly with Max before relying on what a website says.</p>
+          </div>
         </div>
       </section>
 
-      <section class="section-pad listing-section">
-        <div class="listing-grid">
-          <article class="listing-card">
-            <p class="eyebrow">For Sale</p>
-            <h2>Sale Listings</h2>
-            <p>Commercial properties, investment assets, retail sites, land, and specialty opportunities available for purchase should be reviewed against the buyer's goals and financing path.</p>
-            <a class="button secondary" href="sale-listings.html">View sale listing page</a>
-          </article>
-          <article class="listing-card">
-            <p class="eyebrow">For Lease</p>
-            <h2>Commercial Lease Listings</h2>
-            <p>Available spaces should be evaluated for tenant use, location, term, visibility, access, improvement needs, and long-term operational fit.</p>
-            <a class="button secondary" href="commercial-lease-listings.html">View lease listing page</a>
-          </article>
+      <section class="section">
+        <div class="section-inner">
+          <div class="card-grid cols-2">
+            <article class="card reveal">
+              <p class="num">For Sale</p>
+              <h3>Sale Listings</h3>
+              <p>
+                Commercial properties, investment assets, retail sites, land, and specialty
+                opportunities available for purchase &mdash; reviewed against the buyer's goals and
+                financing path.
+              </p>
+              <a class="text-link" href="sale-listings.html">View sale listings</a>
+            </article>
+            <article class="card reveal" style="--reveal-delay:.1s">
+              <p class="num">For Lease</p>
+              <h3>Commercial Lease Listings</h3>
+              <p>
+                Available spaces evaluated for tenant use, location, term, visibility, access,
+                improvement needs, and long-term operational fit.
+              </p>
+              <a class="text-link" href="commercial-lease-listings.html">View lease listings</a>
+            </article>
+          </div>
         </div>
-        <div class="detail-cta">
-          <p>Have a property to list or a space requirement to discuss? Send the details and Max can help decide the right path.</p>
-          <a class="button primary" href="contact.html">Talk with Max</a>
+      </section>
+
+      <section class="cta-band on-dark">
+        <div class="reveal">
+          <h2>Have a property to list or <em>a space requirement?</em></h2>
+          <p class="lede">Send the details and Max can help decide the right path.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html">Talk with Max</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>The Magellan Group - Commercial real estate advisory in Germantown and the Memphis region.</p>
-      <div class="footer-links">
-        <a href="terms-conditions.html">Terms &amp; Conditions</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>The Magellan Group</strong>
+          <small>Commercial Real Estate</small>
+          <p>
+            Founder-led commercial real estate advisory from J. Max Hamidi, CCIM &mdash; serving
+            serious owners, investors, borrowers, and referral partners in Germantown, Memphis,
+            and the Mid-South.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Max</a>
+          <a href="services.html">Services</a>
+          <a href="asset-types.html">Asset Types</a>
+          <a href="listings.html">Listings</a>
+          <a href="deal-matrix.html">Deal Matrix</a>
+          <a href="team.html">Team</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:max@ccim.net">max@ccim.net</a>
+          <a href="tel:+19016064941">Cell: (901) 606-4941</a>
+          <a href="tel:+18667242629">Office: (866) 724-2629</a>
+          <span>1914 Exeter Rd., Suite 3<br>Germantown, TN 38138</span>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; <span data-year>2026</span> The Magellan Group. All rights reserved.</span>
+        <span>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </span>
       </div>
     </footer>
+    <script src="main.js?v=2" defer></script>
   </body>
 </html>

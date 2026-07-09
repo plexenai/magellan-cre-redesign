@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://magellan-cre-redesign.vercel.app/sitemap.xml

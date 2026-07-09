@@ -6,63 +6,114 @@
     <link rel="icon" href="assets/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <title>Sale Listings | Magellan CRE</title>
-    <meta
-      name="description"
-      content="Sale listings and commercial property sale inquiries for The Magellan Group."
-    >
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Commercial sale listings from The Magellan Group — call for active inventory and share the asset type, market, value range, and timing for the most relevant response.">
+    <meta property="og:title" content="Sale Listings | Magellan CRE">
+    <meta property="og:description" content="Commercial sale listings from The Magellan Group — call for active inventory and share the asset type, market, value range, and timing for the most relevant response.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://magellan-cre-redesign.vercel.app/sale-listings.html">
+    <meta property="og:image" content="https://magellan-cre-redesign.vercel.app/assets/j-max-hamidi.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Magellan Group home">
-        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="" aria-hidden="true">
+        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="The Magellan Group logo">
         <span class="brand-copy">
           <strong>The Magellan Group</strong>
           <small>Commercial Real Estate</small>
         </span>
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="about.html">About Max</a>
         <a href="services.html">Services</a>
-        <a aria-current="page" href="listings.html">Listings</a>
+        <a href="listings.html">Listings</a>
         <a href="deal-matrix.html">Deal Matrix</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Start a Conversation</a>
       </nav>
     </header>
 
-    <main>
-      <section class="page-hero simple-hero service-detail-hero">
-        <div>
-          <p class="eyebrow">Sale Listings</p>
-          <h1>Sale opportunities should be current, qualified, and tied to the buyer's objective.</h1>
-          <p class="hero-text">
-            The current site has a Sale Listings page but no visible active inventory. This page keeps
-            the path available while directing serious buyers, sellers, and referral partners to confirm
-            current opportunities with Max.
-          </p>
+    <main id="main">
+      <section class="page-hero on-dark">
+        <div class="page-hero-grid">
+          <div class="reveal visible">
+            <p class="eyebrow">Listings &middot; For Sale</p>
+            <h1>Sale opportunities should be current, qualified, and tied to <em>the buyer's objective.</em></h1>
+            <p class="lede">Commercial sale opportunities can change quickly. Call for active sale inventory rather than relying on a static page.</p>
+          </div>
         </div>
       </section>
 
-      <section class="section-pad listing-section">
-        <div class="listing-empty">
-          <p class="eyebrow">Current Availability</p>
-          <h2>Call for active sale inventory.</h2>
-          <p>
-            Commercial sale opportunities can change quickly. Share the asset type, market, estimated
-            value, buyer profile, and timing so Max can respond with the most relevant path.
-          </p>
-          <a class="button primary" href="contact.html">Ask about sale listings</a>
+      <section class="section">
+        <div class="section-inner">
+          <article class="card reveal" style="max-width:760px">
+            <p class="num">Current Availability</p>
+            <h3>Call for active sale inventory</h3>
+            <p>
+              Share the asset type, market, estimated value, buyer profile, and timing so Max can
+              respond with the most relevant path.
+            </p>
+            <a class="text-link" href="contact.html">Ask about sale listings</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta-band on-dark">
+        <div class="reveal">
+          <h2>Serious about buying or selling <em>commercial property?</em></h2>
+          <p class="lede">Max will tell you what is actually available and whether the timing works.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html">Ask about sale listings</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>The Magellan Group - Commercial real estate advisory in Germantown and the Memphis region.</p>
-      <div class="footer-links">
-        <a href="terms-conditions.html">Terms &amp; Conditions</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>The Magellan Group</strong>
+          <small>Commercial Real Estate</small>
+          <p>
+            Founder-led commercial real estate advisory from J. Max Hamidi, CCIM &mdash; serving
+            serious owners, investors, borrowers, and referral partners in Germantown, Memphis,
+            and the Mid-South.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Max</a>
+          <a href="services.html">Services</a>
+          <a href="asset-types.html">Asset Types</a>
+          <a href="listings.html">Listings</a>
+          <a href="deal-matrix.html">Deal Matrix</a>
+          <a href="team.html">Team</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:max@ccim.net">max@ccim.net</a>
+          <a href="tel:+19016064941">Cell: (901) 606-4941</a>
+          <a href="tel:+18667242629">Office: (866) 724-2629</a>
+          <span>1914 Exeter Rd., Suite 3<br>Germantown, TN 38138</span>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; <span data-year>2026</span> The Magellan Group. All rights reserved.</span>
+        <span>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </span>
       </div>
     </footer>
+    <script src="main.js?v=2" defer></script>
   </body>
 </html>

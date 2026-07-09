@@ -6,79 +6,128 @@
     <link rel="icon" href="assets/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <title>Business Brokerage | Magellan CRE</title>
-    <meta
-      name="description"
-      content="Business brokerage services for ownership transitions, business sales, mergers and acquisitions, franchise evaluation, and exit strategy planning."
-    >
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Business brokerage sits close to Max's operator background: evaluating the business, the real estate, the buyer pool, the transition risk, and the people involved.">
+    <meta property="og:title" content="Business Brokerage | Magellan CRE">
+    <meta property="og:description" content="Business brokerage sits close to Max's operator background: evaluating the business, the real estate, the buyer pool, the transition risk, and the people involved.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://magellan-cre-redesign.vercel.app/business-brokerage.html">
+    <meta property="og:image" content="https://magellan-cre-redesign.vercel.app/assets/j-max-hamidi.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Magellan Group home">
-        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="" aria-hidden="true">
+        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="The Magellan Group logo">
         <span class="brand-copy">
           <strong>The Magellan Group</strong>
           <small>Commercial Real Estate</small>
         </span>
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="about.html">About Max</a>
-        <a aria-current="page" href="services.html">Services</a>
+        <a href="services.html">Services</a>
         <a href="listings.html">Listings</a>
         <a href="deal-matrix.html">Deal Matrix</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Start a Conversation</a>
       </nav>
     </header>
 
-    <main>
-      <section class="page-hero simple-hero service-detail-hero">
-        <div>
-          <p class="eyebrow">Business Brokerage</p>
-          <h1>Ownership transitions need financial clarity and careful communication.</h1>
-          <p class="hero-text">
-            Business brokerage sits close to Max’s operator background: evaluating the business,
-            the real estate, the buyer pool, the transition risk, and the people involved.
-          </p>
+    <main id="main">
+      <section class="page-hero on-dark">
+        <div class="page-hero-grid">
+          <div class="reveal visible">
+            <p class="eyebrow">Services &middot; Business Brokerage</p>
+            <h1>Ownership transitions need financial clarity and <em>careful communication.</em></h1>
+            <p class="lede">Business brokerage sits close to Max's operator background: evaluating the business, the real estate, the buyer pool, the transition risk, and the people involved.</p>
+          </div>
         </div>
       </section>
 
-      <section class="section-pad detail-section">
-        <div class="detail-grid">
-          <article>
-            <span>01</span>
-            <h2>Business Sales and Ownership Transitions</h2>
+      <section class="section">
+        <div class="section-inner">
+        <div class="card-grid cols-2">
+          <article class="card reveal" style="--reveal-delay:0.00s">
+            <p class="num">01</p>
+            <h3>Business Sales &amp; Ownership Transitions</h3>
             <p>Prepare the company story, review operating performance, and organize the transition path for sellers, buyers, advisors, and lenders.</p>
           </article>
-          <article>
-            <span>02</span>
-            <h2>Business Valuation and Financial Review</h2>
+          <article class="card reveal" style="--reveal-delay:0.08s">
+            <p class="num">02</p>
+            <h3>Valuation &amp; Financial Review</h3>
             <p>Review profit and loss statements, tax returns, revenue trends, operational reports, and the realistic valuation range before buyer conversations begin.</p>
           </article>
-          <article>
-            <span>03</span>
-            <h2>Business Exit Strategy Planning</h2>
+          <article class="card reveal" style="--reveal-delay:0.00s">
+            <p class="num">03</p>
+            <h3>Exit Strategy Planning</h3>
             <p>Support owners thinking through timing, value enhancement, confidentiality, buyer qualification, and transaction structure.</p>
           </article>
-          <article>
-            <span>04</span>
-            <h2>Confidential Marketing of Businesses</h2>
+          <article class="card reveal" style="--reveal-delay:0.08s">
+            <p class="num">04</p>
+            <h3>Confidential Marketing</h3>
             <p>Keep the process controlled when employees, customers, competitors, vendors, and lenders need to be handled carefully.</p>
           </article>
         </div>
-        <div class="detail-cta">
-          <p>Best fit: business owners, franchise operators, entrepreneurs, and investors preparing for acquisition or exit decisions.</p>
-          <a class="button primary" href="contact.html">Discuss a business transition</a>
+        </div>
+      </section>
+
+      <section class="cta-band on-dark">
+        <div class="reveal">
+          <h2>Business Brokerage starts with <em>a conversation.</em></h2>
+          <p class="lede">Best fit: business owners, franchise operators, entrepreneurs, and investors preparing for acquisition or exit decisions.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html">Discuss a business transition</a>
+            <a class="button ghost" href="services.html">All services</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>The Magellan Group - Commercial real estate advisory in Germantown and the Memphis region.</p>
-      <div class="footer-links">
-        <a href="terms-conditions.html">Terms &amp; Conditions</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>The Magellan Group</strong>
+          <small>Commercial Real Estate</small>
+          <p>
+            Founder-led commercial real estate advisory from J. Max Hamidi, CCIM &mdash; serving
+            serious owners, investors, borrowers, and referral partners in Germantown, Memphis,
+            and the Mid-South.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Max</a>
+          <a href="services.html">Services</a>
+          <a href="asset-types.html">Asset Types</a>
+          <a href="listings.html">Listings</a>
+          <a href="deal-matrix.html">Deal Matrix</a>
+          <a href="team.html">Team</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:max@ccim.net">max@ccim.net</a>
+          <a href="tel:+19016064941">Cell: (901) 606-4941</a>
+          <a href="tel:+18667242629">Office: (866) 724-2629</a>
+          <span>1914 Exeter Rd., Suite 3<br>Germantown, TN 38138</span>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; <span data-year>2026</span> The Magellan Group. All rights reserved.</span>
+        <span>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </span>
       </div>
     </footer>
+    <script src="main.js?v=2" defer></script>
   </body>
 </html>

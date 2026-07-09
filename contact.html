@@ -6,68 +6,123 @@
     <link rel="icon" href="assets/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <title>Contact | Magellan CRE</title>
-    <meta
-      name="description"
-      content="Contact J. Max Hamidi, CCIM and The Magellan Group about commercial real estate opportunities in Germantown, Memphis, and nearby markets."
-    >
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Contact J. Max Hamidi, CCIM at The Magellan Group — max@ccim.net, cell (901) 606-4941, office (866) 724-2629 — 1914 Exeter Rd., Suite 3, Germantown, TN 38138.">
+    <meta property="og:title" content="Contact | Magellan CRE">
+    <meta property="og:description" content="Contact J. Max Hamidi, CCIM at The Magellan Group — max@ccim.net, cell (901) 606-4941, office (866) 724-2629 — 1914 Exeter Rd., Suite 3, Germantown, TN 38138.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://magellan-cre-redesign.vercel.app/contact.html">
+    <meta property="og:image" content="https://magellan-cre-redesign.vercel.app/assets/j-max-hamidi.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "The Magellan Group",
+      "alternateName": "Magellan CRE",
+      "founder": {
+        "@type": "Person",
+        "name": "J. Max Hamidi",
+        "honorificSuffix": "CCIM",
+        "jobTitle": "CEO and Managing Broker",
+        "email": "mailto:max@ccim.net",
+        "telephone": "+1-901-606-4941"
+      },
+      "email": "mailto:max@ccim.net",
+      "telephone": "+1-866-724-2629",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1914 Exeter Rd., Suite 3",
+        "addressLocality": "Germantown",
+        "addressRegion": "TN",
+        "postalCode": "38138",
+        "addressCountry": "US"
+      },
+      "areaServed": ["Germantown TN", "Memphis TN", "Lakeland TN", "Tennessee", "Mississippi", "Alabama"],
+      "knowsAbout": ["Commercial real estate", "Retail properties", "Gas stations", "Convenience stores", "Strip centers", "Loan packaging", "Property management", "Business brokerage"]
+    }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Magellan Group home">
-        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="" aria-hidden="true">
+        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="The Magellan Group logo">
         <span class="brand-copy">
           <strong>The Magellan Group</strong>
           <small>Commercial Real Estate</small>
         </span>
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="about.html">About Max</a>
         <a href="services.html">Services</a>
         <a href="listings.html">Listings</a>
         <a href="deal-matrix.html">Deal Matrix</a>
         <a href="team.html">Team</a>
         <a aria-current="page" href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Start a Conversation</a>
       </nav>
     </header>
 
-    <main>
-      <section id="contact" class="section-pad contact-section">
-        <div>
-          <p class="eyebrow">Contact</p>
-          <h1>Start with enough detail for a useful answer.</h1>
-          <p>
-            Share the property, borrower, investor, owner, tenant, or referral context so Max can
-            quickly tell whether he is the right person to help.
-          </p>
+    <main id="main">
+      <section class="page-hero on-dark">
+        <div class="page-hero-grid">
+          <div class="reveal visible">
+            <p class="eyebrow">Contact</p>
+            <h1>Start with enough detail for <em>a useful answer.</em></h1>
+            <p class="lede">Share the property, borrower, investor, owner, tenant, or referral context so Max can quickly tell whether he is the right person to help.</p>
+          </div>
         </div>
-        <div class="contact-panel">
-          <div class="contact-card">
-            <h3>J. Max Hamidi, CCIM</h3>
-            <a href="mailto:max@ccim.net">max@ccim.net</a>
-            <a href="tel:+18667242629">Office: (866) 724-2629</a>
-            <a href="tel:+19016064941">Cell: (901) 606-4941</a>
-            <p>1914 Exeter Rd., Suite 3<br>Germantown, TN 38138</p>
-            <p>Local: (901) 290-1185<br>Fax: (855) 724-2629</p>
+      </section>
+
+      <section class="section">
+        <div class="contact-grid">
+          <div class="reveal">
+            <div class="contact-card">
+              <h3>J. Max Hamidi, CCIM</h3>
+              <p class="role">CEO &amp; Managing Broker</p>
+              <a href="mailto:max@ccim.net">max@ccim.net</a>
+              <a href="tel:+19016064941">Cell: (901) 606-4941</a>
+              <a href="tel:+18667242629">Office: (866) 724-2629</a>
+              <a href="tel:+19012901185">Local: (901) 290-1185</a>
+              <p class="addr">
+                1914 Exeter Rd., Suite 3<br>
+                Germantown, TN 38138<br>
+                Fax: (855) 724-2629
+              </p>
+            </div>
+            <div class="contact-map">
+              <iframe
+                title="Map to The Magellan Group office"
+                src="https://www.google.com/maps?q=1914+Exeter+Rd+Suite+3+Germantown+TN+38138&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
 
-          <form class="inquiry-form" aria-label="Commercial inquiry form" data-static-form>
-            <h3>Commercial inquiry form</h3>
+          <form class="inquiry-form reveal" style="--reveal-delay:.1s">
+            <div>
+              <p class="eyebrow" style="margin-bottom:8px">Commercial Inquiry</p>
+              <h3>Tell Max about the deal</h3>
+            </div>
             <div class="form-grid">
-              <label>
-                Name
-                <input name="name" type="text" autocomplete="name">
+              <label>Name
+                <input type="text" name="name" autocomplete="name" required>
               </label>
-              <label>
-                Email
-                <input name="email" type="email" autocomplete="email">
+              <label>Email
+                <input type="email" name="email" autocomplete="email" required>
               </label>
-              <label>
-                Phone
-                <input name="phone" type="tel" autocomplete="tel">
+              <label>Phone
+                <input type="tel" name="phone" autocomplete="tel">
               </label>
-              <label>
-                Role
+              <label>Your role
                 <select name="role">
                   <option>Owner</option>
                   <option>Investor</option>
@@ -78,42 +133,68 @@
                   <option>Advisor agent or mentee</option>
                 </select>
               </label>
-              <label>
-                Property or deal type
-                <input name="deal-type" type="text">
+              <label>Property or deal type
+                <input type="text" name="dealType" placeholder="e.g., strip center, gas station, loan package">
               </label>
-              <label>
-                Location
-                <input name="location" type="text">
+              <label>Location
+                <input type="text" name="location" placeholder="City, market, or address">
               </label>
-              <label>
-                Estimated value or range
-                <input name="estimated-value" type="text">
+              <label>Estimated value or range
+                <input type="text" name="value">
               </label>
-              <label>
-                Timeline
-                <input name="timeline" type="text">
+              <label>Timeline
+                <input type="text" name="timeline">
               </label>
-              <label class="full-span">
-                Message
-                <textarea name="message" rows="5"></textarea>
+              <label class="full-span">Message
+                <textarea name="message" rows="5" placeholder="What are you trying to accomplish?"></textarea>
               </label>
             </div>
             <p class="form-note">
-              Thanks for reaching out. Max will review the details and follow up if this looks like a fit.
+              Submitting opens your email app with the details addressed to max@ccim.net.
             </p>
-            <button type="button">Prepare inquiry</button>
+            <button class="button primary" type="submit">Send the inquiry</button>
           </form>
         </div>
       </section>
+
     </main>
 
     <footer class="site-footer">
-      <p>The Magellan Group - Commercial real estate advisory in Germantown and the Memphis region.</p>
-      <div class="footer-links">
-        <a href="terms-conditions.html">Terms &amp; Conditions</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>The Magellan Group</strong>
+          <small>Commercial Real Estate</small>
+          <p>
+            Founder-led commercial real estate advisory from J. Max Hamidi, CCIM &mdash; serving
+            serious owners, investors, borrowers, and referral partners in Germantown, Memphis,
+            and the Mid-South.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Max</a>
+          <a href="services.html">Services</a>
+          <a href="asset-types.html">Asset Types</a>
+          <a href="listings.html">Listings</a>
+          <a href="deal-matrix.html">Deal Matrix</a>
+          <a href="team.html">Team</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:max@ccim.net">max@ccim.net</a>
+          <a href="tel:+19016064941">Cell: (901) 606-4941</a>
+          <a href="tel:+18667242629">Office: (866) 724-2629</a>
+          <span>1914 Exeter Rd., Suite 3<br>Germantown, TN 38138</span>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; <span data-year>2026</span> The Magellan Group. All rights reserved.</span>
+        <span>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </span>
       </div>
     </footer>
+    <script src="main.js?v=2" defer></script>
   </body>
 </html>

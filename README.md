@@ -1,39 +1,43 @@
-# Magellan CRE Redesign Preview
+# Magellan CRE Redesign
 
-This repository contains a lightweight static website concept for a proposed
-redesign of The Magellan Group / Magellan CRE website.
+A founder-led redesign concept for The Magellan Group / Magellan CRE, centered on
+J. Max Hamidi, CCIM as a seasoned commercial real estate advisor for serious owners,
+investors, borrowers, and referral partners in Germantown, Memphis, and the Mid-South.
 
-The direction is founder-led and personal: the page centers J. Max Hamidi, CCIM
-as a seasoned commercial real estate advisor for serious owners, investors,
-borrowers, and referral partners.
+## Design
 
-## Files
+Editorial-advisory design system: warm parchment canvas, deep navy grounding, antique
+brass accent, Playfair Display headlines with gold italic accent words, DM Sans body,
+scroll-reveal animations, cinematic full-viewport video hero, and a sticky header with
+mobile navigation.
 
-- `index.html` - founder-led homepage
-- `about.html` - Max's background and experience
-- `services.html` - commercial real estate service lanes
-- `asset-types.html` - broader property categories preserved from the current site
-- `investment-sales.html` - investment sales detail page
-- `seller-representation.html` - seller representation detail page
-- `buyer-representation.html` - buyer representation detail page
-- `landlord-representation.html` - landlord representation detail page
-- `tenant-representation.html` - tenant representation detail page
-- `business-brokerage.html` - business brokerage detail page
-- `property-management.html` - property management detail page
-- `loan-packaging.html` - commercial financing and loan packaging detail page
-- `deal-matrix.html` - qualified-opportunity fit guide
-- `listings.html` - listing hub
-- `sale-listings.html` - sale listing shell with current-availability guidance
-- `commercial-lease-listings.html` - lease listing shell with current-availability guidance
-- `team.html` - advisor network and team page
-- `contact.html` - contact details and static inquiry UI
-- `terms-conditions.html` - terms page adapted from the current site
-- `privacy-policy.html` - privacy page adapted from the current site
-- `styles.css` - responsive styling and approved palette
-- `assets/` - Max portrait, Ginny portrait, Magellan logo, favicons, 15-second hero loop video, and motion background artwork
-- `outputs/magellan-redesign-brief.md` - supporting redesign brief
+Approved palette: `#141E28` ink, `#F7F2E9` parchment, `#B08A3C` brass, `#6F8178` sage.
+
+## Pages
+
+- `index.html` — homepage: video hero, stats band, four advisory lanes, Max quote,
+  about teaser, services teaser, deal-matrix preview, team preview, CTA
+- `about.html` — Max's story as a timeline, principles, proof points
+- `services.html` — service directory and how-Max-works process
+- Detail pages: `investment-sales`, `seller-representation`, `buyer-representation`,
+  `landlord-representation`, `tenant-representation`, `business-brokerage`,
+  `property-management`, `loan-packaging`
+- `asset-types.html` — broader property categories
+- `deal-matrix.html` — qualified-opportunity fit guide
+- `listings.html`, `sale-listings.html`, `commercial-lease-listings.html`
+- `team.html` — Max, Ginny Shea Dunn, and the advisor/mentee network
+- `contact.html` — contact details, embedded map, and an inquiry form that opens the
+  visitor's email app addressed to max@ccim.net
+- `terms-conditions.html`, `privacy-policy.html`
+- `styles.css` — design system
+- `main.js` — mobile nav, sticky header, scroll reveals, contact form
+- `sitemap.xml`, `robots.txt` — SEO (update the base URL when the production domain
+  moves to magellancre.com)
+- `outputs/magellan-redesign-brief.md` — supporting redesign brief
 
 ## Notes
 
-This is a concept site only. It is not the production replacement for
-`magellancre.com`, and the contact UI is not wired to a backend or CRM yet.
+This is a concept site. The contact form is not wired to a backend or CRM — it opens
+the visitor's email client prefilled. Before production launch on magellancre.com,
+update the base URL in `sitemap.xml`, the Open Graph URLs, and have counsel review the
+legal pages.

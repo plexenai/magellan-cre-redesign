@@ -3,3 +3,4 @@ work/
 .vercel/
 .DS_Store
 .vercel
+.claude/

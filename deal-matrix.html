@@ -6,81 +6,136 @@
     <link rel="icon" href="assets/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="assets/favicon.png">
     <title>Commercial Deal Matrix | Magellan CRE</title>
-    <meta
-      name="description"
-      content="A commercial deal-fit matrix for deciding when J. Max Hamidi, CCIM and The Magellan Group are the right advisor for a property, borrower, or referral opportunity."
-    >
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="The Magellan Group deal matrix — a simple filter for qualified commercial real estate conversations: strong-fit deals, helpful details to bring, and what isn't the first priority.">
+    <meta property="og:title" content="Commercial Deal Matrix | Magellan CRE">
+    <meta property="og:description" content="The Magellan Group deal matrix — a simple filter for qualified commercial real estate conversations: strong-fit deals, helpful details to bring, and what isn't the first priority.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://magellan-cre-redesign.vercel.app/deal-matrix.html">
+    <meta property="og:image" content="https://magellan-cre-redesign.vercel.app/assets/j-max-hamidi.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=2">
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <a class="brand" href="index.html" aria-label="The Magellan Group home">
-        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="" aria-hidden="true">
+        <img class="brand-logo" src="assets/magellan-group-logo.png" alt="The Magellan Group logo">
         <span class="brand-copy">
           <strong>The Magellan Group</strong>
           <small>Commercial Real Estate</small>
         </span>
       </a>
-      <nav class="site-nav" aria-label="Primary navigation">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
         <a href="about.html">About Max</a>
         <a href="services.html">Services</a>
         <a href="listings.html">Listings</a>
         <a aria-current="page" href="deal-matrix.html">Deal Matrix</a>
         <a href="team.html">Team</a>
         <a href="contact.html">Contact</a>
+        <a class="nav-cta" href="contact.html">Start a Conversation</a>
       </nav>
     </header>
 
-    <main>
-      <section id="matrix" class="section-pad fit-section matrix-page">
-        <div class="fit-intro">
-          <p class="eyebrow">Commercial Deal Matrix</p>
-          <h1>A simple filter for the right conversation.</h1>
-          <p>
-            Max is selective because the work is advisory. The best fit is a commercial situation
-            where the property, borrower, owner, investor, or referral partner has enough substance
-            for him to add real value.
-          </p>
+    <main id="main">
+      <section class="page-hero on-dark">
+        <div class="page-hero-grid">
+          <div class="reveal visible">
+            <p class="eyebrow">The Deal Matrix</p>
+            <h1>A simple filter for <em>the right conversation.</em></h1>
+            <p class="lede">Max is selective because the work is advisory. The best fit is a commercial situation where the property, borrower, owner, investor, or referral partner has enough substance for him to add real value.</p>
+          </div>
         </div>
-        <div class="fit-grid matrix-grid">
-          <article class="fit-card good">
-            <h3>Strong fit</h3>
-            <ul>
-              <li>Retail properties, gas stations, convenience stores, and strip centers</li>
-              <li>Investor-owned commercial properties that need leasing or management</li>
-              <li>Loan packages that need to be organized before going to banks</li>
-              <li>Transactions near seven figures or above, where the advisory work is justified</li>
-              <li>Referral partners with clear context and a serious client need</li>
-            </ul>
-          </article>
-          <article class="fit-card careful">
-            <h3>Not the first priority</h3>
-            <ul>
-              <li>Small residential searches that do not need commercial advisory work</li>
-              <li>Unqualified leads without ownership, borrower, tenant, or investor context</li>
-              <li>Requests that lack basic project details, capacity needs, or intended use</li>
-              <li>Deals where Max cannot help at the level the client deserves</li>
-            </ul>
-          </article>
-          <article class="fit-card bring">
-            <h3>Helpful details to bring</h3>
-            <ul>
-              <li>Property address, asset type, current use, and market area</li>
-              <li>Owner, borrower, investor, tenant, or referral role</li>
-              <li>Estimated value, lease status, financing need, and timing</li>
-              <li>For specialty uses like data centers: power, equipment, capacity, and operating requirements</li>
-            </ul>
-          </article>
+      </section>
+
+      <section class="section on-dark" style="padding-top:0">
+        <div class="section-inner">
+          <div class="card-grid cols-3">
+            <article class="fit-card good reveal">
+              <h3>Strong fit</h3>
+              <ul>
+                <li>Retail properties, gas stations, convenience stores, and strip centers</li>
+                <li>Investor-owned commercial properties that need leasing or management</li>
+                <li>Loan packages that need to be organized before going to banks</li>
+                <li>Transactions near seven figures or above, where the advisory work is justified</li>
+                <li>Referral partners with clear context and a serious client need</li>
+              </ul>
+            </article>
+            <article class="fit-card bring reveal" style="--reveal-delay:.1s">
+              <h3>Helpful details to bring</h3>
+              <ul>
+                <li>Property address, asset type, current use, and market area</li>
+                <li>Owner, borrower, investor, tenant, or referral role</li>
+                <li>Estimated value, lease status, financing need, and timing</li>
+                <li>For specialty uses like data centers: power, equipment, capacity, and operating requirements</li>
+              </ul>
+            </article>
+            <article class="fit-card careful reveal" style="--reveal-delay:.2s">
+              <h3>Not the first priority</h3>
+              <ul>
+                <li>Small residential searches that do not need commercial advisory work</li>
+                <li>Unqualified leads without ownership, borrower, tenant, or investor context</li>
+                <li>Requests that lack basic project details, capacity needs, or intended use</li>
+                <li>Deals where Max cannot help at the level the client deserves</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band on-dark">
+        <div class="reveal">
+          <h2>If it fits the matrix, <em>Max wants to hear about it.</em></h2>
+          <p class="lede">Send the details and get a straight answer about whether this is the right conversation.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="contact.html">Start with a conversation</a>
+            <a class="button ghost" href="services.html">See the services</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>The Magellan Group - Commercial real estate advisory in Germantown and the Memphis region.</p>
-      <div class="footer-links">
-        <a href="terms-conditions.html">Terms &amp; Conditions</a>
-        <a href="privacy-policy.html">Privacy Policy</a>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <strong>The Magellan Group</strong>
+          <small>Commercial Real Estate</small>
+          <p>
+            Founder-led commercial real estate advisory from J. Max Hamidi, CCIM &mdash; serving
+            serious owners, investors, borrowers, and referral partners in Germantown, Memphis,
+            and the Mid-South.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="about.html">About Max</a>
+          <a href="services.html">Services</a>
+          <a href="asset-types.html">Asset Types</a>
+          <a href="listings.html">Listings</a>
+          <a href="deal-matrix.html">Deal Matrix</a>
+          <a href="team.html">Team</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:max@ccim.net">max@ccim.net</a>
+          <a href="tel:+19016064941">Cell: (901) 606-4941</a>
+          <a href="tel:+18667242629">Office: (866) 724-2629</a>
+          <span>1914 Exeter Rd., Suite 3<br>Germantown, TN 38138</span>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <span>&copy; <span data-year>2026</span> The Magellan Group. All rights reserved.</span>
+        <span>
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </span>
       </div>
     </footer>
+    <script src="main.js?v=2" defer></script>
   </body>
 </html>
