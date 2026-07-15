@@ -85,7 +85,7 @@ const requiredText = [
   "assets/j-max-hamidi.jpg",
   "assets/ginny-dunn.jpg",
   "assets/favicon.ico",
-  "assets/manus-hero-memphis.webp",
+  "assets/magellan-hero-corridor-ai.webp",
   "hero-slide",
   "Vision",
   "Fun",
@@ -160,16 +160,13 @@ assert.ok(statSync("assets/ginny-dunn.jpg").size > 1000, "Expected Ginny photo a
 assert.ok(existsSync("assets/favicon.ico"), "Expected favicon ico asset");
 assert.ok(existsSync("assets/favicon.png"), "Expected favicon png asset");
 for (const asset of [
-  "assets/manus-hero-memphis.webp",
-  "assets/manus-hero-slide-2.webp",
-  "assets/manus-hero-slide-3.webp",
-  "assets/manus-hero-slide-4.webp",
-  "assets/manus-advisory-desk.webp",
-  "assets/manus-strip-center.webp",
+  "assets/magellan-hero-corridor-ai.webp",
+  "assets/magellan-retail-center-ai.webp",
+  "assets/magellan-advisory-desk-ai.webp",
   "assets/manus-brand-logo.webp",
 ]) {
-  assert.ok(existsSync(asset), `Expected Manus visual asset: ${asset}`);
-  assert.ok(statSync(asset).size > 1000, `Expected Manus visual asset to be substantial: ${asset}`);
+  assert.ok(existsSync(asset), `Expected visual asset: ${asset}`);
+  assert.ok(statSync(asset).size > 1000, `Expected visual asset to be substantial: ${asset}`);
 }
 
 const serviceDetailLinks = [
