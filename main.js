@@ -44,6 +44,18 @@
     });
   }
 
+
+  // Manus-style homepage hero carousel
+  var heroSlides = Array.prototype.slice.call(document.querySelectorAll(".hero-slide"));
+  if (heroSlides.length > 1) {
+    var heroIndex = 0;
+    window.setInterval(function () {
+      heroSlides[heroIndex].classList.remove("active");
+      heroIndex = (heroIndex + 1) % heroSlides.length;
+      heroSlides[heroIndex].classList.add("active");
+    }, 4200);
+  }
+
   // Footer year
   var year = document.querySelector("[data-year]");
   if (year) {
@@ -59,19 +71,27 @@
         var field = form.querySelector('[name="' + name + '"]');
         return field && field.value ? field.value.trim() : "";
       };
-      var lines = [
-        "Name: " + get("name"),
-        "Email: " + get("email"),
-        "Phone: " + get("phone"),
-        "Role: " + get("role"),
-        "Property or deal type: " + get("dealType"),
-        "Location: " + get("location"),
-        "Estimated value or range: " + get("value"),
-        "Timeline: " + get("timeline"),
-        "",
-        get("message"),
-      ];
-      var subject = "Commercial inquiry from " + (get("name") || "magellancre.com");
+      var fieldLabels = {
+        name: "Name",
+        email: "Email",
+        phone: "Phone",
+        role: "Role",
+        subject: "Subject",
+        dealType: "Property or deal type",
+        location: "Location",
+        value: "Estimated value or range",
+        timeline: "Timeline",
+      };
+      var lines = Object.keys(fieldLabels)
+        .map(function (name) {
+          var value = get(name);
+          return value ? fieldLabels[name] + ": " + value : "";
+        })
+        .filter(Boolean);
+      if (get("message")) {
+        lines.push("", get("message"));
+      }
+      var subject = get("subject") || "Commercial inquiry from " + (get("name") || "magellancre.com");
       window.location.href =
         "mailto:max@ccim.net?subject=" +
         encodeURIComponent(subject) +

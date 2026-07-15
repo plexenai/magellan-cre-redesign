@@ -38,7 +38,7 @@ const normalizedCombined = combined.replace(/\s+/g, " ");
 const requiredText = [
   "The Magellan Group",
   "J. Max Hamidi, CCIM",
-  "Commercial real estate guidance from a broker who knows the deal behind the property.",
+  "Thirty years of deals. <em>One phone call</em> to start.",
   "Circle K",
   "Tennessee, Mississippi, and Alabama",
   "Marcus &amp; Millichap",
@@ -50,7 +50,6 @@ const requiredText = [
   "leasing, rent collection, vacancy marketing, management, and deposits",
   "Commercial Deal Matrix",
   "near seven figures or above",
-  "Investment Sales",
   "Seller Representation",
   "Buyer Representation",
   "Landlord Representation",
@@ -63,42 +62,39 @@ const requiredText = [
   "Lease Availability",
   "Asset Types",
   "Multifamily",
-  "Office and Industrial",
+  "Office &amp; Industrial",
   "Land",
   "Hospitality",
-  "Special Property and Specialty Realty",
+  "Special Property &amp; Specialty Realty",
   "Private Equity",
   "Training",
   "Terms &amp; Conditions",
   "Privacy Policy",
   "https://www.linkedin.com/in/j-max-hamidi-ccim-65599624/",
-  "Business Sales and Ownership Transitions",
-  "Business Exit Strategy Planning",
-  "Confidential Marketing of Businesses",
-  "Retail Centers",
-  "Hard Money Lending and Bank Conversations",
-  "Property Evaluation and Financial Analysis",
-  "Market Positioning and Pricing Strategy",
-  "Buyer Qualification and Investor Targeting",
-  "Ginny comes with economic development experience",
+  "Business Sales &amp; Ownership Transitions",
+  "Exit Strategy Planning",
+  "Confidential Marketing",
+  "Retail &amp; Convenience Real Estate",
+  "Hard Money &amp; Bank Conversations",
+  "Property Evaluation &amp; Financial Analysis",
+  "Market Positioning &amp; Pricing Strategy",
+  "Buyer Qualification &amp; Investor Targeting",
+  "Ginny brings economic development experience",
   "Sprouts, The Lake District, Orange Theory Fitness",
-  "Advisor Agents and Mentees",
+  "Advisor agents &amp; mentees",
   "assets/j-max-hamidi.jpg",
   "assets/ginny-dunn.jpg",
-  "assets/magellan-group-logo.png",
   "assets/favicon.ico",
-  "assets/magellan-hero-loop.mp4",
-  "autoplay muted loop playsinline",
+  "assets/manus-hero-memphis.webp",
+  "hero-slide",
   "Vision",
   "Fun",
-  "Thoughtful, cooperative, and ethical commercial real estate service.",
-  "assets/magellan-loop.svg",
-  "15s",
+  "thoughtful, cooperative, and ethical practices.",
   "How Max Works",
-  "Commercial inquiry form",
+  "Commercial Inquiry",
   "Property or deal type",
   "Estimated value or range",
-  "Thanks for reaching out. Max will review the details and follow up if this looks like a fit.",
+  "Submitting opens your email app with the details addressed to max@ccim.net.",
   "max@ccim.net",
   "Office: (866) 724-2629",
   "Cell: (901) 606-4941",
@@ -108,24 +104,22 @@ for (const text of requiredText) {
   assert.ok(normalizedCombined.includes(text), `Expected site to include: ${text}`);
 }
 
-const requiredIds = [
-  "about",
-  "background",
-  "services",
-  "matrix",
-  "process",
-  "proof",
-  "team",
-  "contact",
+const requiredHomeLinks = [
+  "about.html",
+  "services.html",
+  "asset-types.html",
+  "deal-matrix.html",
+  "team.html",
+  "contact.html",
 ];
 
-for (const id of requiredIds) {
-  assert.ok(combined.includes(`id="${id}"`), `Expected section id="${id}"`);
+for (const href of requiredHomeLinks) {
+  assert.ok(html.includes(`href="${href}"`), `Expected homepage to link to ${href}`);
 }
 
 const expectedPageTitles = {
-  "index.html": "Magellan CRE | J. Max Hamidi, CCIM",
-  "about.html": "About Max | Magellan CRE",
+  "index.html": "Magellan CRE | J. Max Hamidi, CCIM — Commercial Real Estate Advisor in Germantown, TN",
+  "about.html": "About Max | J. Max Hamidi, CCIM | Magellan CRE",
   "services.html": "Services | Magellan CRE",
   "asset-types.html": "Asset Types | Magellan CRE",
   "investment-sales.html": "Investment Sales | Magellan CRE",
@@ -142,7 +136,7 @@ const expectedPageTitles = {
   "deal-matrix.html": "Commercial Deal Matrix | Magellan CRE",
   "team.html": "Team | Magellan CRE",
   "contact.html": "Contact | Magellan CRE",
-  "terms-conditions.html": "Terms &amp; Conditions | Magellan CRE",
+  "terms-conditions.html": "Terms & Conditions | Magellan CRE",
   "privacy-policy.html": "Privacy Policy | Magellan CRE",
 };
 
@@ -152,8 +146,7 @@ for (const [file, title] of Object.entries(expectedPageTitles)) {
 
 const homeOnlyDeepSections = [
   "Circle K brand across Tennessee, Mississippi, and Alabama",
-  "Investment Sales",
-  "Commercial inquiry form",
+  "Commercial Inquiry",
 ];
 
 for (const text of homeOnlyDeepSections) {
@@ -164,13 +157,20 @@ assert.ok(existsSync("assets/j-max-hamidi.jpg"), "Expected Max photo asset");
 assert.ok(statSync("assets/j-max-hamidi.jpg").size > 1000, "Expected Max photo asset to be a real image");
 assert.ok(existsSync("assets/ginny-dunn.jpg"), "Expected Ginny photo asset");
 assert.ok(statSync("assets/ginny-dunn.jpg").size > 1000, "Expected Ginny photo asset to be a real image");
-assert.ok(existsSync("assets/magellan-group-logo.png"), "Expected Magellan logo asset");
-assert.ok(statSync("assets/magellan-group-logo.png").size > 1000, "Expected Magellan logo asset to be a real image");
 assert.ok(existsSync("assets/favicon.ico"), "Expected favicon ico asset");
 assert.ok(existsSync("assets/favicon.png"), "Expected favicon png asset");
-assert.ok(existsSync("assets/magellan-hero-loop.mp4"), "Expected hero loop video asset");
-assert.ok(statSync("assets/magellan-hero-loop.mp4").size > 100000, "Expected hero loop video to be a real video file");
-assert.ok(existsSync("assets/magellan-loop.svg"), "Expected loop background asset");
+for (const asset of [
+  "assets/manus-hero-memphis.webp",
+  "assets/manus-hero-slide-2.webp",
+  "assets/manus-hero-slide-3.webp",
+  "assets/manus-hero-slide-4.webp",
+  "assets/manus-advisory-desk.webp",
+  "assets/manus-strip-center.webp",
+  "assets/manus-brand-logo.webp",
+]) {
+  assert.ok(existsSync(asset), `Expected Manus visual asset: ${asset}`);
+  assert.ok(statSync(asset).size > 1000, `Expected Manus visual asset to be substantial: ${asset}`);
+}
 
 const serviceDetailLinks = [
   "investment-sales.html",
@@ -209,9 +209,9 @@ const requiredFormNames = [
   "email",
   "phone",
   "role",
-  "deal-type",
+  "dealType",
   "location",
-  "estimated-value",
+  "value",
   "timeline",
   "message",
 ];
