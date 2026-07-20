@@ -1603,6 +1603,10 @@ textarea:focus {
   box-shadow: 0 26px 76px rgba(0, 0, 0, 0.24);
 }
 
+.route-hero-image.portrait-frame {
+  object-position: center 18%;
+}
+
 .route-container {
   width: min(100%, var(--container));
   margin: 0 auto;
@@ -1718,6 +1722,10 @@ textarea:focus {
   margin-bottom: 24px;
   border-radius: var(--radius);
   object-fit: cover;
+}
+
+.portrait-card-image {
+  object-position: center 18%;
 }
 
 .manus-service-card h3,
