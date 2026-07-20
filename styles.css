@@ -1568,6 +1568,30 @@ textarea:focus {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.route-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.56fr);
+  gap: clamp(34px, 6vw, 84px);
+  align-items: center;
+}
+
+.route-hero-copy {
+  max-width: 920px;
+}
+
+.route-hero-copy > .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.route-hero-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: 0 26px 76px rgba(0, 0, 0, 0.24);
+}
+
 .route-container {
   width: min(100%, var(--container));
   margin: 0 auto;
@@ -1670,11 +1694,19 @@ textarea:focus {
 
 .manus-service-card span {
   display: block;
-  margin-bottom: 28px;
+  margin-bottom: 18px;
   color: rgba(51, 49, 48, 0.18);
   font-family: var(--serif);
   font-size: 2.2rem;
   line-height: 1;
+}
+
+.service-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 24px;
+  border-radius: var(--radius);
+  object-fit: cover;
 }
 
 .manus-service-card h3,
@@ -1999,10 +2031,15 @@ textarea:focus {
   .split.reverse,
   .contact-grid,
   .page-hero-grid,
+  .route-hero-grid,
   .about-layout,
   .contact-layout,
   .matrix-grid {
     grid-template-columns: 1fr;
+  }
+
+  .route-hero-image {
+    max-height: 360px;
   }
 
   .service-lanes,
@@ -2064,6 +2101,10 @@ textarea:focus {
 
   .manus-route-hero {
     padding-top: 118px;
+  }
+
+  .route-hero-image {
+    max-height: 260px;
   }
 
   .manus-service-card,
