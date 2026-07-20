@@ -1375,13 +1375,13 @@ textarea:focus {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transform: scale(1.025);
-  transition: opacity 1.7s ease, transform 6s ease;
+  transform: none;
+  transition: opacity 1.7s ease;
 }
 
 .hero-slide.active {
   opacity: 1;
-  transform: scale(1);
+  transform: none;
 }
 
 .hero-media-shade {
@@ -1582,6 +1582,17 @@ textarea:focus {
 .route-hero-copy > .reveal.visible {
   opacity: 1;
   transform: none;
+}
+
+/* Keep photo-heavy elements optically still while the page scrolls. */
+.route-hero-image.reveal,
+.route-feature-image.reveal,
+.manus-service-card.reveal,
+.listing-card.reveal,
+.person-card.reveal {
+  opacity: 1;
+  transform: none;
+  transition-property: box-shadow, border-color, background-color;
 }
 
 .route-hero-image {
