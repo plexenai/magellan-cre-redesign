@@ -58,8 +58,14 @@ const requiredText = [
   "Listings",
   "Sale Listings",
   "Commercial Lease Listings",
-  "Current Availability",
-  "Lease Availability",
+  "Find an <em>eXp listing.</em>",
+  "Property Inventory",
+  "buildout.com/plugins/1e870beae6e5127a301814258bfa58158c22d2b4/www.magellancre.com/inventory/",
+  "Sale <em>Listings.</em>",
+  "Lease <em>Listings.</em>",
+  "https://www.crexi.com/lease/widgets/483",
+  "Active sale inventory",
+  "Active lease inventory",
   "Asset Types",
   "Multifamily",
   "Office &amp; Industrial",
@@ -242,5 +248,18 @@ assert.ok(!/placeholder/i.test(html), "Visible placeholder language should be re
 assert.ok(!/preview/i.test(html), "Public page should not use internal preview language");
 assert.ok(!/preview\/prototype/i.test(html), "Public page should not describe itself as a preview/prototype");
 assert.ok(!/Not the production replacement/i.test(html), "Public footer should not use internal production disclaimer language");
+
+const removedListingPlaceholders = [
+  "Strip Center — Germantown",
+  "Retail Space — Highway Frontage",
+  "Convenience Store & Gas Station",
+  "Multi-tenant retail strip center with strong occupancy",
+  "High-visibility retail space with excellent highway frontage",
+  "Established convenience store with fuel operations",
+];
+
+for (const text of removedListingPlaceholders) {
+  assert.ok(!normalizedCombined.includes(text), `Removed placeholder listing should not appear: ${text}`);
+}
 
 console.log("Static site verification passed.");

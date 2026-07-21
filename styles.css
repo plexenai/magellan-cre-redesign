@@ -1740,7 +1740,49 @@ textarea:focus {
 .listing-card p,
 .person-card p,
 .matrix-panel p,
-.contact-profile p,
+.contact-profile p {
+  color: var(--text);
+}
+
+.listings-live-section {
+  background: var(--white);
+}
+
+.section-inner.wide {
+  width: min(100%, calc(var(--container) + 120px));
+}
+
+.listing-embed-card {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-md);
+}
+
+.listing-embed-heading {
+  padding: clamp(28px, 4vw, 44px);
+  border-bottom: 1px solid var(--line);
+}
+
+.listing-embed-heading h2 {
+  margin-bottom: 12px;
+}
+
+.listing-embed-heading p:last-child {
+  max-width: 780px;
+  margin: 0;
+  color: var(--text);
+}
+
+.listing-embed-card iframe {
+  display: block;
+  width: 100%;
+  min-height: 900px;
+  border: 0;
+  background: var(--paper);
+}
+
 .route-note {
   color: var(--text);
 }
