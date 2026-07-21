@@ -85,9 +85,9 @@ const requiredText = [
   "assets/j-max-hamidi.jpg",
   "assets/ginny-dunn.jpg",
   "assets/favicon.ico",
-  "assets/listing-gas-station.webp",
-  "assets/listing-strip-center.webp",
-  "assets/service-loan-packaging.webp",
+  "assets/aerial-gas-station.webp",
+  "assets/aerial-strip-center.webp",
+  "assets/aerial-loan-packaging.webp",
   "hero-slide",
   "Vision",
   "Fun",
@@ -162,12 +162,12 @@ assert.ok(statSync("assets/ginny-dunn.jpg").size > 1000, "Expected Ginny photo a
 assert.ok(existsSync("assets/favicon.ico"), "Expected favicon ico asset");
 assert.ok(existsSync("assets/favicon.png"), "Expected favicon png asset");
 for (const asset of [
-  "assets/listing-gas-station.webp",
-  "assets/listing-highway-frontage.webp",
-  "assets/listing-strip-center.webp",
-  "assets/service-loan-packaging.webp",
-  "assets/service-property-management.webp",
-  "assets/service-representation.webp",
+  "assets/aerial-gas-station.webp",
+  "assets/aerial-highway-frontage.webp",
+  "assets/aerial-strip-center.webp",
+  "assets/aerial-loan-packaging.webp",
+  "assets/aerial-property-management.webp",
+  "assets/aerial-commercial-corridor.webp",
   "assets/manus-brand-logo.webp",
 ]) {
   assert.ok(existsSync(asset), `Expected visual asset: ${asset}`);
