@@ -178,8 +178,6 @@ for (const asset of [
   "assets/live-keys-handoff.webp",
   "assets/live-owner-meeting.webp",
   "assets/live-land.webp",
-  "assets/manus-advisory-desk.webp",
-  "assets/manus-strip-center.webp",
   "assets/service-investment-sales.webp",
   "assets/service-representation.webp",
   "assets/service-retail-advisory.webp",
@@ -189,8 +187,8 @@ for (const asset of [
   "assets/listing-highway-frontage.webp",
   "assets/listing-gas-station.webp",
   "assets/magellan-retail-center-ai.webp",
-  "assets/manus-brand-logo.webp",
-]) {
+  "assets/magellan-advisory-desk-ai.webp",
+  "assets/manus-brand-logo.webp",]) {
   assert.ok(existsSync(asset), `Expected visual asset: ${asset}`);
   assert.ok(statSync(asset).size > 1000, `Expected visual asset to be substantial: ${asset}`);
 }
@@ -248,6 +246,13 @@ assert.ok(!/placeholder/i.test(html), "Visible placeholder language should be re
 assert.ok(!/preview/i.test(html), "Public page should not use internal preview language");
 assert.ok(!/preview\/prototype/i.test(html), "Public page should not describe itself as a preview/prototype");
 assert.ok(!/Not the production replacement/i.test(html), "Public footer should not use internal production disclaimer language");
+
+const allowedMaxPhotoPages = new Set(["about.html", "team.html"]);
+for (const [file, pageHtml] of Object.entries(pages)) {
+  if (pageHtml.includes('src="assets/j-max-hamidi.jpg"')) {
+    assert.ok(allowedMaxPhotoPages.has(file), `Max portrait should only appear on About and Team pages, found in ${file}`);
+  }
+}
 
 const removedListingPlaceholders = [
   "Strip Center — Germantown",
