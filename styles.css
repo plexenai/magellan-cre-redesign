@@ -1587,6 +1587,8 @@ textarea:focus {
 /* Keep photo-heavy elements optically still while the page scrolls. */
 .route-hero-image.reveal,
 .route-feature-image.reveal,
+.split-photo.reveal,
+.split-photo.landscape.reveal,
 .manus-service-card.reveal,
 .listing-card.reveal,
 .person-card.reveal {
@@ -1645,8 +1647,6 @@ textarea:focus {
 
 .route-feature-image {
   aspect-ratio: 4 / 5;
-  position: sticky;
-  top: 112px;
 }
 
 .manus-quote {

@@ -247,6 +247,10 @@ assert.ok(!/preview/i.test(html), "Public page should not use internal preview l
 assert.ok(!/preview\/prototype/i.test(html), "Public page should not describe itself as a preview/prototype");
 assert.ok(!/Not the production replacement/i.test(html), "Public footer should not use internal production disclaimer language");
 
+assert.ok(!/background-attachment:\s*fixed/i.test(css), "No image background should use fixed scroll behavior");
+assert.ok(!/route-feature-image\s*\{[^}]*position:\s*sticky/is.test(css), "No photo should use sticky scroll behavior");
+assert.ok(css.includes(".split-photo.reveal"), "Split-photo image blocks should be excluded from scroll movement");
+
 const allowedMaxPhotoPages = new Set(["about.html", "team.html"]);
 for (const [file, pageHtml] of Object.entries(pages)) {
   if (pageHtml.includes('src="assets/j-max-hamidi.jpg"')) {
