@@ -137,11 +137,11 @@ h2 em,
 }
 
 .on-dark .eyebrow {
-  color: var(--brass-bright);
+  color: var(--gold-bright);
 }
 
 .on-dark .eyebrow::before {
-  background: var(--brass-bright);
+  background: var(--gold-bright);
 }
 
 .lede {
@@ -178,11 +178,12 @@ h2 em,
 
 .button.primary {
   background: var(--brass);
-  color: var(--ink-deep);
+  color: var(--white);
 }
 
 .button.primary:hover {
   background: var(--brass-bright);
+  color: var(--white);
   transform: translateY(-2px);
   box-shadow: 0 12px 30px rgba(45, 84, 163, 0.26);
 }
@@ -337,7 +338,7 @@ h2 em,
 
 .site-nav .nav-cta:hover {
   background: var(--brass);
-  color: var(--ink-deep);
+  color: var(--white);
 }
 
 .site-nav .nav-call {
@@ -1178,7 +1179,7 @@ textarea:focus {
 .footer-brand small {
   display: block;
   margin: 6px 0 16px;
-  color: var(--brass-bright);
+  color: var(--gold-bright);
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -1211,7 +1212,7 @@ textarea:focus {
 }
 
 .footer-col a:hover {
-  color: var(--brass-bright);
+  color: var(--gold-bright);
 }
 
 .footer-legal {
@@ -1224,16 +1225,16 @@ textarea:focus {
   margin: 0 auto;
   padding-top: 26px;
   font-size: 0.82rem;
-  color: rgba(247, 242, 233, 0.45);
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .footer-legal a {
-  color: rgba(247, 242, 233, 0.6);
+  color: rgba(255, 255, 255, 0.78);
   margin-left: 18px;
 }
 
 .footer-legal a:hover {
-  color: var(--brass-bright);
+  color: var(--gold-bright);
 }
 
 /* ---------- legal pages ---------- */
