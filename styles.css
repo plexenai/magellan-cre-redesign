@@ -1577,7 +1577,7 @@ textarea:focus {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(13, 21, 29, 0.9) 0%, rgba(13, 21, 29, 0.7) 48%, rgba(13, 21, 29, 0.34) 100%),
-    url("assets/live-owner-meeting.webp") center / cover no-repeat;
+    url("assets/team-advisory-hero.jpg") 64% center / cover no-repeat;
 }
 
 .team-route-hero::after {
@@ -2200,7 +2200,7 @@ textarea:focus {
 
   .team-route-hero {
     min-height: 500px;
-    background-position: 62% center;
+    background-position: 72% center;
   }
 
   .manus-service-card,

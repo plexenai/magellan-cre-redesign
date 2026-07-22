@@ -40,6 +40,8 @@ Approved palette: `#141E28` ink, `#F7F2E9` parchment, `#B08A3C` brass, `#6F8178`
 
 ## Notes
 
+Team hero image source: Unsplash photo by Fiqih Alfarish, "Team collaborates during a business presentation with data on screen." Used under the Unsplash License.
+
 This is a concept site. The contact form is not wired to a backend or CRM — it opens
 the visitor's email client prefilled. Before production launch on magellancre.com,
 update the base URL in `sitemap.xml`, the Open Graph URLs, and have counsel review the
