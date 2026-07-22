@@ -58,7 +58,7 @@ const requiredText = [
   "Listings",
   "Sale Listings",
   "Commercial Lease Listings",
-  "Find an <em>eXp listing.</em>",
+  "View current <em>listings.</em>",
   "Property Inventory",
   "buildout.com/plugins/1e870beae6e5127a301814258bfa58158c22d2b4/www.magellancre.com/inventory/",
   "Sale <em>Listings.</em>",

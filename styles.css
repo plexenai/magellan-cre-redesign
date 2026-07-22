@@ -1565,7 +1565,20 @@ textarea:focus {
 }
 
 .manus-route-hero .lede {
-  color: rgba(255, 255, 255, 0.72);
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.manus-route-hero .eyebrow {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.manus-route-hero .eyebrow::before {
+  background: #d8b15c;
+}
+
+.manus-route-hero h1 em {
+  color: #f0c86d;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.34);
 }
 
 .team-route-hero {
