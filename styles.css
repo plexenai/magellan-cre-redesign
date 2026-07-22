@@ -15,6 +15,9 @@
   --brass: #2d54a3;
   --brass-bright: #0673b7;
   --brass-dark: #0d1f48;
+  --gold: #d8b15c;
+  --gold-bright: #f0c86d;
+  --gold-soft: rgba(216, 177, 92, 0.18);
   --sage: #939393;
   --text: #646464;
   --text-dark: rgba(255, 255, 255, 0.74);
@@ -1387,16 +1390,37 @@ textarea:focus {
 .hero-media-shade {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.42));
+  background:
+    linear-gradient(90deg, rgba(13, 31, 72, 0.08), rgba(216, 177, 92, 0.18)),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.42));
 }
 
 .hero-panel {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: clamp(96px, 11vw, 150px) clamp(32px, 6vw, 86px) clamp(64px, 7vw, 96px);
-  background: var(--ink);
+  background:
+    radial-gradient(circle at 18% 24%, rgba(216, 177, 92, 0.12), transparent 34%),
+    linear-gradient(135deg, #202020 0%, #252525 48%, #141414 100%);
   color: var(--white);
+}
+
+.hero-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 5px;
+  background: linear-gradient(180deg, var(--gold-bright), var(--gold), transparent 78%);
+}
+
+.hero-panel .eyebrow {
+  color: var(--gold-bright);
+}
+
+.hero-panel .eyebrow::before {
+  background: var(--gold-bright);
 }
 
 .hero-panel h1 {
@@ -1405,6 +1429,11 @@ textarea:focus {
   font-size: clamp(2.55rem, 5.4vw, 4.35rem);
   line-height: 1.08;
 }
+
+.hero-panel h1 em {
+  color: var(--gold-bright);
+}
+
 
 .hero-panel .lede {
   max-width: 580px;
@@ -1417,12 +1446,12 @@ textarea:focus {
   gap: 24px clamp(26px, 4vw, 48px);
   margin-top: clamp(42px, 5vw, 62px);
   padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-top: 1px solid rgba(216, 177, 92, 0.32);
 }
 
 .hero-stats strong {
   display: block;
-  color: var(--white);
+  color: var(--gold-bright);
   font-family: var(--serif);
   font-size: clamp(1.45rem, 2.4vw, 2rem);
   line-height: 1;
@@ -1463,6 +1492,19 @@ textarea:focus {
   box-shadow: none;
 }
 
+.home-page .card {
+  position: relative;
+}
+
+.home-page .card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold), rgba(216, 177, 92, 0));
+  opacity: 0.85;
+}
+
 .card .num {
   margin-left: auto;
   margin-bottom: 24px;
@@ -1471,8 +1513,23 @@ textarea:focus {
   font-weight: 400;
 }
 
-.card:hover .num {
-  color: rgba(45, 84, 163, 0.2);
+.home-page .card:hover .num {
+  color: var(--gold-soft);
+}
+
+.home-page .section-heading .eyebrow,
+.home-page .manus-about .eyebrow {
+  color: var(--gold);
+}
+
+.home-page .section-heading .eyebrow::before,
+.home-page .manus-about .eyebrow::before {
+  background: var(--gold);
+}
+
+.home-page .section-heading h2 em,
+.home-page .manus-about h2 em {
+  color: var(--gold);
 }
 
 .split-photo.landscape {
@@ -1509,6 +1566,16 @@ textarea:focus {
   font-weight: 600;
 }
 
+.home-page .about-pills span::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
 .referral-band {
   background: var(--ink);
 }
@@ -1525,6 +1592,10 @@ textarea:focus {
   padding: clamp(28px, 4vw, 42px);
   background: var(--white);
   border: 1px solid var(--line);
+}
+
+.home-page .contact-mini {
+  border-top: 3px solid var(--gold);
 }
 
 .contact-mini strong {
@@ -1549,6 +1620,10 @@ textarea:focus {
   flex: 0 0 auto;
   border-radius: 50%;
   background: var(--brass);
+}
+
+.home-page .contact-mini p span {
+  background: var(--gold);
 }
 
 .site-footer {
