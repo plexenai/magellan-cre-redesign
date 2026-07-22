@@ -109,6 +109,8 @@ const requiredText = [
   "Accountability, collaboration, community outreach",
   "Ginny Shea Dunn",
   "Business Broker",
+  "Brokered by eXp Commercial",
+  "eXp Commercial Network",
 ];
 
 for (const text of requiredText) {
