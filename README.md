@@ -20,12 +20,10 @@ Approved palette: `#141E28` ink, `#F7F2E9` parchment, `#B08A3C` brass, `#6F8178`
 - `about.html` — Max's story as a timeline, principles, proof points
 - `services.html` — service directory and how-Max-works process
 - Detail pages: `investment-sales`, `seller-representation`, `buyer-representation`,
-  `landlord-representation`, `tenant-representation`, `business-brokerage`,
+  `landlord-representation`, `tenant-representation`, `business-broker`,
   `property-management`, `loan-packaging`
-- `asset-types.html` — broader property categories
-- `deal-matrix.html` — qualified-opportunity fit guide
 - `listings.html`, `sale-listings.html`, `commercial-lease-listings.html`
-- `team.html` — Max, Ginny Shea Dunn, and the advisor/mentee network
+- `team.html` — Max, Ginny Shea Dunn, and the advisor/mentee network; retained as a support page, not a primary navigation item
 - `contact.html` — contact details, embedded map, and an inquiry form that opens the
   visitor's email app addressed to max@ccim.net
 - `terms-conditions.html`, `privacy-policy.html`

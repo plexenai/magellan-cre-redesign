@@ -2,7 +2,9 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/business-broker", "destination": "/business-brokerage", "permanent": true },
+    { "source": "/business-brokerage", "destination": "/business-broker", "permanent": true },
+    { "source": "/asset-types", "destination": "/services", "permanent": true },
+    { "source": "/deal-matrix", "destination": "/contact", "permanent": true },
     { "source": "/about-1", "destination": "/about", "permanent": true }
   ]
 }
