@@ -1568,6 +1568,36 @@ textarea:focus {
   color: rgba(255, 255, 255, 0.72);
 }
 
+.team-route-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: clamp(520px, 62vh, 720px);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(13, 21, 29, 0.9) 0%, rgba(13, 21, 29, 0.7) 48%, rgba(13, 21, 29, 0.34) 100%),
+    url("assets/live-owner-meeting.webp") center / cover no-repeat;
+}
+
+.team-route-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(180deg, rgba(13, 21, 29, 0.08), rgba(13, 21, 29, 0.58));
+  pointer-events: none;
+}
+
+.team-route-hero .route-container {
+  position: relative;
+  z-index: 1;
+}
+
+.route-hero-grid.team-route-hero-grid {
+  grid-template-columns: minmax(0, 760px);
+}
+
 .route-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.56fr);
@@ -2166,6 +2196,11 @@ textarea:focus {
 
   .route-hero-image {
     max-height: 260px;
+  }
+
+  .team-route-hero {
+    min-height: 500px;
+    background-position: 62% center;
   }
 
   .manus-service-card,
