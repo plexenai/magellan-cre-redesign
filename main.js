@@ -53,7 +53,7 @@
       heroSlides[heroIndex].classList.remove("active");
       heroIndex = (heroIndex + 1) % heroSlides.length;
       heroSlides[heroIndex].classList.add("active");
-    }, 4200);
+    }, 3750);
   }
 
   // Footer year

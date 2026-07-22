@@ -84,9 +84,10 @@ const requiredText = [
   "assets/j-max-hamidi.jpg",
   "assets/ginny-dunn.jpg",
   "assets/favicon.ico",
-  "assets/live-office-hallway.webp",
-  "assets/live-retail-storefront.webp",
-  "assets/live-model-city.webp",
+  "assets/aerial-commercial-corridor.webp",
+  "assets/aerial-strip-center.webp",
+  "assets/aerial-gas-station.webp",
+  "assets/aerial-highway-frontage.webp",
   "assets/manus-advisory-desk.webp",
   "assets/manus-strip-center.webp",
   "hero-slide",
@@ -169,9 +170,10 @@ assert.ok(statSync("assets/ginny-dunn.jpg").size > 1000, "Expected Ginny photo a
 assert.ok(existsSync("assets/favicon.ico"), "Expected favicon ico asset");
 assert.ok(existsSync("assets/favicon.png"), "Expected favicon png asset");
 for (const asset of [
-  "assets/live-office-hallway.webp",
-  "assets/live-retail-storefront.webp",
-  "assets/live-model-city.webp",
+  "assets/aerial-commercial-corridor.webp",
+  "assets/aerial-strip-center.webp",
+  "assets/aerial-gas-station.webp",
+  "assets/aerial-highway-frontage.webp",
   "assets/manus-advisory-desk.webp",
   "assets/manus-strip-center.webp",
   "assets/live-keys-handoff.webp",
