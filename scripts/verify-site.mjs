@@ -16,7 +16,6 @@ const pageFiles = [
   "listings.html",
   "sale-listings.html",
   "commercial-lease-listings.html",
-  "team.html",
   "contact.html",
   "terms-conditions.html",
   "privacy-policy.html",
@@ -126,7 +125,6 @@ const requiredHomeLinks = [
   "about.html",
   "services.html",
   "investment-sales.html",
-  "team.html",
   "contact.html",
 ];
 
@@ -135,7 +133,7 @@ for (const href of requiredHomeLinks) {
 }
 
 assert.ok(!html.includes("<a class=\"button ghost\" href=\"tel:+18667242629\">Call (866) 724-2629</a>"), "Homepage contact section should not duplicate the phone CTA");
-assert.ok(html.includes("href=\"team.html\">Team</a>"), "Expected homepage top nav to link to Team");
+assert.ok(!html.includes("href=\"team.html\""), "Team should live under About, not top navigation");
 
 const expectedPageTitles = {
   "index.html": "Magellan CRE | J. Max Hamidi, CCIM — Commercial Real Estate Advisor in Germantown, TN",
@@ -152,7 +150,6 @@ const expectedPageTitles = {
   "listings.html": "Listings | Magellan CRE",
   "sale-listings.html": "Sale Listings | Magellan CRE",
   "commercial-lease-listings.html": "Commercial Lease Listings | Magellan CRE",
-  "team.html": "Team | Magellan CRE",
   "contact.html": "Contact | Magellan CRE",
   "terms-conditions.html": "Terms & Conditions | Magellan CRE",
   "privacy-policy.html": "Privacy Policy | Magellan CRE",
@@ -259,10 +256,10 @@ assert.ok(!/background-attachment:\s*fixed/i.test(css), "No image background sho
 assert.ok(!/route-feature-image\s*\{[^}]*position:\s*sticky/is.test(css), "No photo should use sticky scroll behavior");
 assert.ok(css.includes(".split-photo.reveal"), "Split-photo image blocks should be excluded from scroll movement");
 
-const allowedMaxPhotoPages = new Set(["about.html", "team.html"]);
+const allowedMaxPhotoPages = new Set(["about.html"]);
 for (const [file, pageHtml] of Object.entries(pages)) {
   if (pageHtml.includes('src="assets/j-max-hamidi.jpg"')) {
-    assert.ok(allowedMaxPhotoPages.has(file), `Max portrait should only appear on About and Team pages, found in ${file}`);
+    assert.ok(allowedMaxPhotoPages.has(file), `Max portrait should only appear on the About page, found in ${file}`);
   }
 }
 
