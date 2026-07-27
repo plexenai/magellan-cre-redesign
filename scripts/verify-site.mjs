@@ -126,12 +126,16 @@ const requiredHomeLinks = [
   "about.html",
   "services.html",
   "investment-sales.html",
+  "team.html",
   "contact.html",
 ];
 
 for (const href of requiredHomeLinks) {
   assert.ok(html.includes(`href="${href}"`), `Expected homepage to link to ${href}`);
 }
+
+assert.ok(!html.includes("<a class=\"button ghost\" href=\"tel:+18667242629\">Call (866) 724-2629</a>"), "Homepage contact section should not duplicate the phone CTA");
+assert.ok(html.includes("href=\"team.html\">Team</a>"), "Expected homepage top nav to link to Team");
 
 const expectedPageTitles = {
   "index.html": "Magellan CRE | J. Max Hamidi, CCIM — Commercial Real Estate Advisor in Germantown, TN",
