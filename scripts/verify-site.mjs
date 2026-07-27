@@ -233,6 +233,12 @@ for (const [file, pageHtml] of Object.entries(pages)) {
   assert.ok(pageHtml.includes('href="privacy-policy.html"'), `Expected ${file} footer to link to privacy`);
 }
 
+const footerPagesPattern = /<h4>Pages<\/h4>\s*<a href="index\.html">Home<\/a>\s*<a href="about\.html">About<\/a>\s*<a href="services\.html">Services<\/a>\s*<a href="listings\.html">Listings<\/a>\s*<a href="contact\.html">Contact<\/a>/;
+for (const [file, pageHtml] of Object.entries(pages)) {
+  assert.ok(footerPagesPattern.test(pageHtml), `Expected ${file} footer Pages to match top navigation`);
+}
+
+
 const requiredFormNames = [
   "name",
   "email",
