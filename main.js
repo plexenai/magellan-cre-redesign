@@ -75,11 +75,11 @@
         name: "Name",
         email: "Email",
         phone: "Phone",
-        role: "Role",
-        subject: "Subject",
-        dealType: "Property or deal type",
+        role: "I am a",
+        subject: "Inquiry type",
+        dealType: "Property type",
         location: "Location",
-        value: "Estimated value or range",
+        value: "Estimated value",
         timeline: "Timeline",
       };
       var lines = Object.keys(fieldLabels)

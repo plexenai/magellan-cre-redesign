@@ -69,20 +69,62 @@
             </dl>
           </aside>
           <form class="inquiry-form reveal visible" data-static-form>
+            <div class="form-intro">
+              <p class="eyebrow">Qualified Commercial Inquiry</p>
+              <h2>Send Max the basics.</h2>
+              <p>Share enough detail for Max to understand the property, timing, and whether the opportunity is a fit.</p>
+            </div>
             <div class="form-grid">
-              <label>Name<input type="text" name="name" autocomplete="name" required></label>
+              <label>Full name<input type="text" name="name" autocomplete="name" required></label>
               <label>Email<input type="email" name="email" autocomplete="email" required></label>
               <label>Phone<input type="tel" name="phone" autocomplete="tel"></label>
-              <label>Role<input type="text" name="role"></label>
-              <label>Commercial Inquiry<input type="text" name="subject" value="Commercial real estate inquiry"></label>
-              <label>Property or deal type<input type="text" name="dealType"></label>
-              <label>Location<input type="text" name="location"></label>
-              <label>Estimated value or range<input type="text" name="value"></label>
-              <label>Timeline<input type="text" name="timeline"></label>
-              <label class="full-span">Message<textarea name="message" rows="7" placeholder="Tell Max about the property, timing, value, and what you are trying to accomplish."></textarea></label>
+              <label>I am a<select name="role">
+                <option value="">Choose one</option>
+                <option>Owner or seller</option>
+                <option>Investor or buyer</option>
+                <option>Borrower</option>
+                <option>Tenant</option>
+                <option>Broker or referral partner</option>
+                <option>Other</option>
+              </select></label>
+              <label>Inquiry type<select name="subject" required>
+                <option value="">Choose one</option>
+                <option>Property sale</option>
+                <option>Property purchase</option>
+                <option>Lease or tenant need</option>
+                <option>Loan packaging</option>
+                <option>Property management</option>
+                <option>Referral or partnership</option>
+              </select></label>
+              <label>Property type<select name="dealType">
+                <option value="">Choose one</option>
+                <option>Gas station / convenience store</option>
+                <option>Strip center / retail</option>
+                <option>Office or industrial</option>
+                <option>Land or development</option>
+                <option>Business sale</option>
+                <option>Other commercial property</option>
+              </select></label>
+              <label>Location<input type="text" name="location" autocomplete="address-level2"></label>
+              <label>Estimated value<select name="value">
+                <option value="">Choose range</option>
+                <option>Under $500K</option>
+                <option>$500K-$1M</option>
+                <option>$1M-$5M</option>
+                <option>$5M+</option>
+                <option>Not sure yet</option>
+              </select></label>
+              <label>Timeline<select name="timeline">
+                <option value="">Choose timing</option>
+                <option>Now / active need</option>
+                <option>30-90 days</option>
+                <option>3-6 months</option>
+                <option>Planning ahead</option>
+              </select></label>
+              <label class="full-span">Message<textarea name="message" rows="6" placeholder="Tell Max what you are trying to accomplish, key facts, and any known property details."></textarea></label>
             </div>
-            <button class="button primary" type="submit">Send Message</button>
-            <p class="form-note">Submitting opens your email app with the details addressed to max@ccim.net.</p>
+            <button class="button primary" type="submit">Send Inquiry</button>
+            <p class="form-note">For this demo, submitting opens your email app with the details addressed to max@ccim.net.</p>
           </form>
         </div>
       </section>

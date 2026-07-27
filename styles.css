@@ -1091,23 +1091,46 @@ h2 em,
 
 .inquiry-form {
   display: grid;
-  gap: 18px;
+  gap: 22px;
   padding: clamp(26px, 3.4vw, 40px);
   background: var(--white);
   border: 1px solid var(--line);
-  border-top: 3px solid var(--brass);
+  border-top: 4px solid var(--brass);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
+}
+
+.form-intro {
+  display: grid;
+  gap: 8px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.form-intro .eyebrow {
+  margin: 0;
+}
+
+.form-intro h2 {
+  margin: 0;
+  font-size: clamp(1.55rem, 2.5vw, 2.1rem);
+}
+
+.form-intro p:last-child {
+  max-width: 620px;
+  margin: 0;
+  color: var(--text);
 }
 
 .form-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 16px 18px;
 }
 
 label {
   display: grid;
+  min-width: 0;
   gap: 8px;
   color: var(--ink);
   font-size: 0.82rem;
@@ -1119,17 +1142,25 @@ input,
 select,
 textarea {
   width: 100%;
-  min-height: 48px;
+  min-width: 0;
+  min-height: 50px;
   padding: 12px 14px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--cream);
   color: var(--ink);
   font: inherit;
+  line-height: 1.35;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
+select {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 textarea {
+  min-height: 148px;
   resize: vertical;
 }
 
@@ -1143,6 +1174,11 @@ textarea:focus {
 
 .full-span {
   grid-column: 1 / -1;
+}
+
+.inquiry-form .button {
+  width: 100%;
+  justify-content: center;
 }
 
 .form-note {
@@ -1774,11 +1810,17 @@ textarea:focus {
   padding: clamp(72px, 9vw, 120px) var(--pad-x);
 }
 
-.about-layout,
-.contact-layout {
+.about-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
   gap: clamp(36px, 6vw, 78px);
+  align-items: start;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(440px, 1fr);
+  gap: clamp(34px, 5vw, 70px);
   align-items: start;
 }
 

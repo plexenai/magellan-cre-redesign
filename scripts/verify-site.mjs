@@ -94,10 +94,12 @@ const requiredText = [
   "Fun",
   "thoughtful, cooperative, and ethical practices.",
   "How Max Works",
-  "Commercial Inquiry",
-  "Property or deal type",
-  "Estimated value or range",
-  "Submitting opens your email app with the details addressed to max@ccim.net.",
+  "Qualified Commercial Inquiry",
+  "Property type",
+  "Send Max the basics.",
+  "Send Inquiry",
+  "Estimated value",
+  "For this demo, submitting opens your email app with the details addressed to max@ccim.net.",
   "max@ccim.net",
   "Office: (866) 724-2629",
   "1914 Exeter Rd., Suite 3",
@@ -161,7 +163,7 @@ for (const [file, title] of Object.entries(expectedPageTitles)) {
 
 const homeOnlyDeepSections = [
   "Circle K brand across Tennessee, Mississippi, and Alabama",
-  "Commercial Inquiry",
+  "Qualified Commercial Inquiry",
 ];
 
 for (const text of homeOnlyDeepSections) {
