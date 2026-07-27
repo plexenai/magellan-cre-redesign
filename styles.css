@@ -1602,6 +1602,38 @@ textarea:focus {
   color: var(--gold);
 }
 
+
+.max-home-photo {
+  display: grid;
+  width: min(100%, 390px);
+  gap: 14px;
+}
+
+.max-home-photo::after,
+.max-home-photo::before {
+  display: none;
+}
+
+.max-home-photo img {
+  aspect-ratio: 4 / 5;
+  object-position: center 12%;
+  box-shadow: 0 24px 70px rgba(13, 31, 72, 0.16);
+}
+
+.max-home-photo .portrait-tag {
+  position: static;
+  max-width: none;
+  padding: 18px 20px;
+  background: var(--white);
+  border-left: 0;
+  border-top: 3px solid var(--gold);
+  box-shadow: var(--shadow-sm);
+}
+
+.max-home-photo .portrait-tag span {
+  line-height: 1.45;
+}
+
 .split-photo.landscape {
   width: 100%;
 }
