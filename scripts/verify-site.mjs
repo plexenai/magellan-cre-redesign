@@ -35,6 +35,7 @@ const normalizedCombined = combined.replace(/\s+/g, " ");
 const requiredText = [
   "The Magellan Group",
   "J. Max Hamidi, CCIM",
+  "Founder-led commercial real estate advisory",
   "Thirty years of deals. <em>One phone call</em> to start.",
   "Circle K",
   "Tennessee, Mississippi, and Alabama",
@@ -99,7 +100,7 @@ const requiredText = [
   "Send Max the basics.",
   "Send Inquiry",
   "Estimated value",
-  "For this demo, submitting opens your email app with the details addressed to max@ccim.net.",
+  "Submitting opens your email app with the details addressed to max@ccim.net.",
   "max@ccim.net",
   "Office: (866) 724-2629",
   "1914 Exeter Rd., Suite 3",
@@ -258,10 +259,10 @@ assert.ok(!/background-attachment:\s*fixed/i.test(css), "No image background sho
 assert.ok(!/route-feature-image\s*\{[^}]*position:\s*sticky/is.test(css), "No photo should use sticky scroll behavior");
 assert.ok(css.includes(".split-photo.reveal"), "Split-photo image blocks should be excluded from scroll movement");
 
-const allowedMaxPhotoPages = new Set(["about.html"]);
+const allowedMaxPhotoPages = new Set(["index.html", "about.html"]);
 for (const [file, pageHtml] of Object.entries(pages)) {
   if (pageHtml.includes('src="assets/j-max-hamidi.jpg"')) {
-    assert.ok(allowedMaxPhotoPages.has(file), `Max portrait should only appear on the About page, found in ${file}`);
+    assert.ok(allowedMaxPhotoPages.has(file), `Max portrait should only appear on the Home and About pages, found in ${file}`);
   }
 }
 
