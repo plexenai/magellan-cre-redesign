@@ -98,7 +98,11 @@ const requiredText = [
   "assets/service-investment-exterior.jpg",
   "assets/service-seller-exterior.jpg",
   "assets/service-buyer-corridor.jpg",
-  "assets/service-convenience-exterior.jpg",
+  "assets/service-landlord-vacancy.jpg",
+  "assets/service-tenant-storefront.jpg",
+  "assets/service-business-exterior.jpg",
+  "assets/service-management-maintained.jpg",
+  "assets/service-loan-frontage.jpg",
   "hero-slide",
   "Vision",
   "Fun",
@@ -200,7 +204,11 @@ for (const asset of [
   "assets/service-investment-exterior.jpg",
   "assets/service-seller-exterior.jpg",
   "assets/service-buyer-corridor.jpg",
-  "assets/service-convenience-exterior.jpg",
+  "assets/service-landlord-vacancy.jpg",
+  "assets/service-tenant-storefront.jpg",
+  "assets/service-business-exterior.jpg",
+  "assets/service-management-maintained.jpg",
+  "assets/service-loan-frontage.jpg",
   "assets/manus-brand-logo.webp",]) {
   assert.ok(existsSync(asset), `Expected visual asset: ${asset}`);
   assert.ok(statSync(asset).size > 1000, `Expected visual asset to be substantial: ${asset}`);
@@ -220,6 +228,10 @@ const serviceDetailLinks = [
 for (const link of serviceDetailLinks) {
   assert.ok(pages["services.html"].includes(`href="${link}"`), `Expected Services directory to link to ${link}`);
 }
+
+const serviceCardSources = [...pages["services.html"].matchAll(/<img class="service-card-image" src="([^"]+)"/g)].map((match) => match[1]);
+assert.equal(serviceCardSources.length, 8, "Expected Services page to include 8 service card images");
+assert.equal(new Set(serviceCardSources).size, 8, "Expected every Services card image to be unique");
 
 const listingsLinks = [
   "listings.html",
