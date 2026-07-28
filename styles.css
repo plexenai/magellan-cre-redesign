@@ -1425,11 +1425,11 @@ textarea:focus {
 }
 
 .hero-slide:nth-child(1) {
-  object-position: center 42%;
+  object-position: center center;
 }
 
 .hero-slide:nth-child(2) {
-  object-position: center 38%;
+  object-position: center center;
 }
 
 .hero-slide:nth-child(3) {
@@ -1450,8 +1450,8 @@ textarea:focus {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(8, 17, 38, 0.9) 0%, rgba(13, 31, 72, 0.78) 36%, rgba(13, 31, 72, 0.44) 66%, rgba(8, 17, 38, 0.3) 100%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.68)),
+    linear-gradient(90deg, rgba(8, 17, 38, 0.94) 0%, rgba(13, 31, 72, 0.82) 36%, rgba(13, 31, 72, 0.42) 66%, rgba(8, 17, 38, 0.18) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.58)),
     linear-gradient(135deg, rgba(216, 177, 92, 0.22), transparent 46%);
 }
 
@@ -1535,6 +1535,45 @@ textarea:focus {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
+}
+
+.home-guidance-strip {
+  padding-top: clamp(36px, 5vw, 58px);
+  padding-bottom: clamp(36px, 5vw, 58px);
+  background: var(--ink-deep);
+  border-top: 1px solid rgba(216, 177, 92, 0.24);
+}
+
+.guidance-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(216, 177, 92, 0.24);
+  border: 1px solid rgba(216, 177, 92, 0.24);
+}
+
+.guidance-strip-grid article {
+  min-height: 100%;
+  padding: clamp(24px, 3.4vw, 38px);
+  background: rgba(8, 17, 38, 0.96);
+}
+
+.guidance-strip-grid span {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--gold-bright);
+  font-family: var(--serif);
+  font-size: 1.45rem;
+}
+
+.guidance-strip-grid h3 {
+  color: var(--white);
+  margin-bottom: 10px;
+}
+
+.guidance-strip-grid p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .stats-band {
@@ -1793,6 +1832,91 @@ textarea:focus {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 0.56fr);
   gap: clamp(34px, 6vw, 84px);
   align-items: center;
+}
+
+.route-hero-premium {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 20%, rgba(216, 177, 92, 0.16), transparent 28%),
+    linear-gradient(135deg, #07142f 0%, #122a59 48%, #1f2327 100%);
+}
+
+.route-hero-premium::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(115deg, transparent 0 54%, rgba(216, 177, 92, 0.15) 54.1% 54.3%, transparent 54.4%),
+    radial-gradient(circle at 15% 82%, rgba(255, 255, 255, 0.08), transparent 24%);
+  pointer-events: none;
+}
+
+.route-hero-premium .route-container {
+  position: relative;
+  z-index: 1;
+}
+
+.route-hero-premium .route-hero-grid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.72fr);
+}
+
+.compact-actions {
+  margin-top: 28px;
+}
+
+.route-guidance-card,
+.route-contact-card {
+  overflow: hidden;
+  border: 1px solid rgba(216, 177, 92, 0.28);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 84px rgba(0, 0, 0, 0.28);
+}
+
+.route-guidance-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.route-guidance-card div {
+  padding: 24px 26px 26px;
+  background: rgba(8, 17, 38, 0.84);
+}
+
+.route-guidance-card strong,
+.route-contact-card strong {
+  display: block;
+  color: var(--white);
+  font-family: var(--serif);
+  font-size: 1.28rem;
+}
+
+.route-guidance-card p,
+.route-contact-card p,
+.route-contact-card span,
+.route-contact-card a {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.route-guidance-card p {
+  margin: 8px 0 0;
+}
+
+.route-contact-card {
+  display: grid;
+  gap: 12px;
+  padding: clamp(28px, 4vw, 42px);
+}
+
+.route-contact-card a {
+  width: fit-content;
+  border-bottom: 1px solid rgba(216, 177, 92, 0.46);
+}
+
+.route-contact-card p {
+  margin: 8px 0 0;
 }
 
 .route-hero-copy {
@@ -2188,6 +2312,24 @@ textarea:focus {
   border-bottom: 1px solid rgba(45, 84, 163, 0.32);
 }
 
+.mentorship-section {
+  background:
+    linear-gradient(135deg, rgba(8, 17, 38, 0.98), rgba(13, 31, 72, 0.94)),
+    url("assets/services-advisory-navigation.png") center / cover no-repeat;
+}
+
+.mentorship-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 80px);
+  align-items: center;
+}
+
+.mentorship-grid .lede {
+  margin-top: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
 
 .person-photo {
   width: 96px;
@@ -2363,9 +2505,15 @@ textarea:focus {
   .contact-grid,
   .page-hero-grid,
   .route-hero-grid,
+  .route-hero-premium .route-hero-grid,
   .about-layout,
   .contact-layout,
-  .matrix-grid {
+  .matrix-grid,
+  .mentorship-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .guidance-strip-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2374,6 +2522,7 @@ textarea:focus {
   }
 
   .service-lanes,
+  .guidance-strip-grid,
   .listing-grid,
   .team-grid,
   .detail-depth-grid,
