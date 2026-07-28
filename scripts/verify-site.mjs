@@ -95,6 +95,10 @@ const requiredText = [
   "assets/premium-loan-editorial.jpg",
   "assets/premium-advisory-editorial.jpg",
   "assets/premium-advisory-editorial.jpg",
+  "assets/service-investment-exterior.jpg",
+  "assets/service-seller-exterior.jpg",
+  "assets/service-buyer-corridor.jpg",
+  "assets/service-convenience-exterior.jpg",
   "hero-slide",
   "Vision",
   "Fun",
@@ -193,6 +197,10 @@ for (const asset of [
   "assets/premium-management-editorial.jpg",
   "assets/premium-loan-editorial.jpg",
   "assets/premium-advisory-editorial.jpg",
+  "assets/service-investment-exterior.jpg",
+  "assets/service-seller-exterior.jpg",
+  "assets/service-buyer-corridor.jpg",
+  "assets/service-convenience-exterior.jpg",
   "assets/manus-brand-logo.webp",]) {
   assert.ok(existsSync(asset), `Expected visual asset: ${asset}`);
   assert.ok(statSync(asset).size > 1000, `Expected visual asset to be substantial: ${asset}`);
